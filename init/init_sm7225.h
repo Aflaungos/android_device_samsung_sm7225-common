@@ -8,6 +8,7 @@ enum device_variant {
     VARIANT_A426N,
     VARIANT_A426U,
     VARIANT_M236B,
+    VARIANT_E236B,
     VARIANT_M426B,
     VARIANT_MAX
 };
@@ -24,6 +25,11 @@ static const variant international_models = {
 
 static const variant international_models_m23 = {
     .model = "SM-M236B",
+    .codename = "m23xq"
+};
+
+static const variant india_models_m23 = {
+    .model = "SM-E236B",
     .codename = "m23xq"
 };
 
@@ -45,6 +51,7 @@ static const variant indea_m_models = {
 static const variant *all_variants[VARIANT_MAX] = {
     &international_models,
     &international_models_m23,
+    &india_models_m23,
     &kor_models,
     &america_models,
     &indea_m_models,
