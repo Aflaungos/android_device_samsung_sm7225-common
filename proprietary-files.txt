@@ -49,7 +49,7 @@ vendor/lib/btaudio_offload_if.so
 vendor/lib/libaudioparsers.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/audio.primary.atoll.so
+vendor/lib/hw/audio.primary.lito.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libaudio_log_utils.so
