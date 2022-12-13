@@ -57,11 +57,8 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := := cortex-a77
 
-# Kernel config
-TARGET_KERNEL_CLANG_COMPILE := true
-# Build with Clang 11 for now
-TARGET_KERNEL_CLANG_VERSION := r383902
-TARGET_KERNEL_SOURCE        := kernel/samsung/sm7225
+# Kernel
+TARGET_KERNEL_SOURCE        := kernel/samsung/m23xq
 TARGET_KERNEL_ARCH          := arm64
 TARGET_KERNEL_HEADER_ARCH   := arm64
 TARGET_LINUX_KERNEL_VERSION := 4.19
