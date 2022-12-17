@@ -452,4 +452,4 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Inherit proprietary blobs
-$(call inherit-product, vendor/samsung/sm7225-common/sm7225-common-vendor.mk)
+$(call inherit-product, vendor/samsung/sm7225-common/sm7225-common/sm7225-common-vendor.mk)
