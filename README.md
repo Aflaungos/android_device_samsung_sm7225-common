@@ -1,2 +1,6 @@
-# Samsung SM7225-common
-Common device Tree for Samsung SM7225 devices (Samsung Galaxy M23/F23, A42/M42, A72)
+Copyright 2022 - The LineageOS Project
+# Device configuration for Samsung SM7225 Devices
+
+Supported devices :
+
+m23xq, m42xq, a42sxq, m72xq
