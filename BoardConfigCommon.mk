@@ -177,7 +177,7 @@ BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USES_MKE2FS := true
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.default
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.default
 
 # SePolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
