@@ -7,3 +7,6 @@ allow init debugfs_tracing_debug:dir mounton;
 
 # /mnt/vendor/efs
 allow init efs_file:dir mounton;
+
+#Vibrator
+allow init vendor_sysfs_vibrator:file create_file_perms;
