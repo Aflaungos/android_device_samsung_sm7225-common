@@ -16,3 +16,6 @@ get_prop(vendor_init, vts_status_prop)
 allow vendor_init persist_debug_prop:file { read };
 allow vendor_init init_service_status_private_prop:file { read };
 allow vendor_init vts_status_prop:file { read };
+allow vendor_init cache_file:dir { write remove_name};
+allow vendor_init cache_file:file { unlink};
+allow vendor_init tee_device:chr_file getattr;
