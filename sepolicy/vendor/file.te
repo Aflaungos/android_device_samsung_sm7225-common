@@ -33,12 +33,22 @@ type app_efs_file, file_type;
 type audio_efs_file, file_type;
 type battery_efs_file, file_type;
 type biometrics_efs_file, file_type;
+type camera_efs_file, file_type;
+type carrier_efs_file, file_type;
 type cpk_efs_file, file_type;
+type dsms_efs_file, file_type;
 type imei_efs_file, file_type;
+type knoxai_efs_file, file_type;
+type kpm_efs_file, file_type;
 type nfc_efs_file, file_type;
+type pdp_efs_file, file_type;
 type pfw_efs_file, file_type;
 type prov_efs_file, file_type;
+type sec_efs_file, file_type;
+type ssm_efs_file, file_type;
+type taas_efs_file, file_type;
 type wifi_efs_file, file_type;
+type gatekeeper_efs_file, file_type;
 
 # PROC
 type proc_last_kmsg, fs_type, proc_type;
