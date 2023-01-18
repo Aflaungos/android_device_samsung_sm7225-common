@@ -203,8 +203,7 @@ PRODUCT_BOOT_JARS += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-service-qti
+    android.hardware.gatekeeper@1.0-service
 
 # Network
 PRODUCT_PACKAGES += \
