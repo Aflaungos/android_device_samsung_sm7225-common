@@ -7,13 +7,3 @@ allow init debugfs_tracing_debug:dir mounton;
 
 # /mnt/vendor/efs
 allow init efs_file:dir mounton;
-
-# AOSP init only covers system_block_device, add our own:
-allow init {
-    boot_block_device
-    dtbo_block_device
-    vbmeta_block_device
-}:{ blk_file lnk_file } relabelto;
-
-#Vibrator
-allow init vendor_sysfs_vibrator:file create_file_perms;
