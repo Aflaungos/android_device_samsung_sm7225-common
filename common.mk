@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -150,7 +150,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.4.vendor \
+    android.hardware.graphics.composer@2.1 \
     android.hardware.graphics.mapper@2.0.vendor \
     android.hardware.graphics.mapper@2.1.vendor \
     android.hardware.graphics.mapper@3.0.vendor \
