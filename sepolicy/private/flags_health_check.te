@@ -1,0 +1,4 @@
+allow flags_health_check aac_drc_prop:file r_file_perms;
+allow flags_health_check ab_update_gki_prop:file r_file_perms;
+allow flags_health_check adbd_config_prop:file r_file_perms;
+allow flags_health_check ctl_adbd_prop:file r_file_perms;
