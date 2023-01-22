@@ -1,3 +1,6 @@
+type hal_vibrator_default, domain;
+type hal_vibrator_default_exec, exec_type, vendor_file_type, file_type;
+
 # /sys/devices/platform/soc/soc:battery/power_supply/*
 allow hal_health_default sysfs_battery:file r_file_perms;
 allow hal_health_default sysfs_battery:dir search;
@@ -11,3 +14,5 @@ allow hal_health_default app_efs_file:dir { read write add_name search };
 allow hal_health_default app_efs_file:file { read write open create getattr setattr };
 
 allow hal_health_default efs_file:dir search;
+
+init_daemon_domain(hal_health_default)
