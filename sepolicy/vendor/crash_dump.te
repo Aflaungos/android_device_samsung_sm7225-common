@@ -1,0 +1,2 @@
+allow crash_dump hwservicemanager_prop:file { map };
+allow crash_dump init:process { ptrace };
