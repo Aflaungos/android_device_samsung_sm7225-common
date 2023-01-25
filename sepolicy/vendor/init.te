@@ -9,7 +9,7 @@ allow init debugfs_tracing_debug:dir { mounton };
 allow init efs_file:dir { mounton };
 
 # /dev/qseecom
-allow init tee_device:chr_file { ioctl };
+allow init tee_device:chr_file { ioctl read write open };
 
 # ion
 allow init ion_device:chr_file { read open ioctl };
@@ -18,7 +18,7 @@ allow init ion_device:chr_file { read open ioctl };
 allow init rild:unix_stream_socket { connectto };
 
 # /vendor/bin/emservice
-allow init vndservicemanager:binder { transfer };
+allow init vndservicemanager:binder { transfer call };
 
 # android.hardwar
 allow init hwservicemanager:binder { call };
@@ -28,3 +28,6 @@ allow init vendor_file:file { execute };
 
 # sysfs
 allow init sysfs:file { read open };
+
+# /dev/binderfs/vndbinder
+allow init vndbinder_device:chr_file { ioctl map };
