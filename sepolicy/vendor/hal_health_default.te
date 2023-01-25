@@ -11,5 +11,3 @@ allow hal_health_default app_efs_file:dir { read write add_name search };
 allow hal_health_default app_efs_file:file { read write open create getattr setattr };
 
 allow hal_health_default efs_file:dir search;
-
-init_daemon_domain(hal_health_default)
