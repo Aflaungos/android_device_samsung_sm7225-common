@@ -16,3 +16,6 @@ allow init ion_device:chr_file { read open ioctl };
 
 # rild (00564E445F4D756C7469636C69656E74)
 allow init rild:unix_stream_socket { connectto };
+
+# /vendor/bin/emservice
+allow init vndservicemanager:binder { transfer };
