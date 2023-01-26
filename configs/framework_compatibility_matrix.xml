@@ -64,7 +64,6 @@
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@6.0::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
@@ -74,7 +73,6 @@
             <name>IEffectsFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@6.0::IEffectsFactory/default</fqname>
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
