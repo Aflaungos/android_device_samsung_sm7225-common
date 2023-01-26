@@ -429,6 +429,19 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# Fix ADB
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.control_privapp_permissions=log
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     $(COMMON_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
