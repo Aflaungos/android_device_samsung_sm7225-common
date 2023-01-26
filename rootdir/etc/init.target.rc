@@ -108,6 +108,28 @@ on late-fs
     exec_start wait_for_keymaster
     mount_all --late
 
+# Logcat Services
+service boot_log /system/bin/logcat -b all -D -f /data/media/0/boot_log_full.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_crash /system/bin/logcat -b crash -D -f /data/media/0/boot_log_crash.txt
+    class main 
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_kernel /system/bin/logcat -b kernel -D -f /data/media/0/boot_log_kernel.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
     rm /cache/boot_log_full.txt
