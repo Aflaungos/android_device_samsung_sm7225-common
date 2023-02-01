@@ -216,9 +216,7 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -351,7 +349,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.samsung-libperfmgr \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.3.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
