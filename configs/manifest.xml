@@ -1,23 +1,5 @@
 <manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
-        <name>android.hardware.audio</name>
-        <transport>hwbinder</transport>
-        <version>6.0</version>
-        <interface>
-            <name>IDevicesFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.audio.effect</name>
-        <transport>hwbinder</transport>
-        <version>6.0</version>
-        <interface>
-            <name>IEffectsFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.bluetooth</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -383,16 +365,6 @@
         <transport>hwbinder</transport>
         <version>1.0</version>
     </hal>
-   <hal format="hidl">
-        <name>vendor.samsung.hardware.audio</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehDevicesFactory</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehDevicesFactory/default</fqname>
-    </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.bluetooth</name>
         <transport>hwbinder</transport>
@@ -422,16 +394,6 @@
             <instance>legacy/0</instance>
         </interface>
         <fqname>@4.0::ISehCameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISehGnss</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::ISehGnss/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.radio</name>
@@ -484,18 +446,9 @@
         <fqname>@1.2::ISehSnap/default</fqname>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>IHealth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
-        <version>1.4</version>
+        <version>1.3</version>
         <interface>
             <name>ICryptoFactory</name>
             <instance>clearkey</instance>
