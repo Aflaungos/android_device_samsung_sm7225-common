@@ -49,7 +49,6 @@ vendor/lib/btaudio_offload_if.so
 vendor/lib/libaudioparsers.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/audio.primary.lito.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libaudio_log_utils.so
@@ -85,8 +84,6 @@ vendor/lib/libdrc.so
 vendor/lib/libspkrprot.so
 
 # Soundtrigger
-vendor/lib/hw/sound_trigger.primary.atoll.so
-vendor/lib64/hw/sound_trigger.primary.atoll.so
 vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libgcs.so
 vendor/lib/libgcs-ipc.so
@@ -551,25 +548,16 @@ vendor/lib64/libjnihelper.so
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/bin/loc_launcher
-vendor/bin/hw/android.hardware.gnss@2.1-service-qti
-vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
-vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so
-vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
-vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/etc/gps.conf
 vendor/etc/sap.conf
 vendor/etc/lowi.conf
 vendor/etc/flp.conf
 vendor/etc/izat.conf
-vendor/etc/gnss_antenna_info.conf
 vendor/lib/libgps.utils.so
 vendor/lib64/libgps.utils.so
 vendor/lib/libgnsspps.so
-vendor/lib/libgnss.so
 vendor/lib64/libgnsspps.so
-vendor/lib64/libgnss.so
 vendor/lib/vendor.qti.gnss@1.0.so
 vendor/lib/vendor.qti.gnss@1.1.so
 vendor/lib/vendor.qti.gnss@1.2.so
@@ -577,7 +565,6 @@ vendor/lib/vendor.qti.gnss@2.0.so
 vendor/lib/vendor.qti.gnss@2.1.so
 vendor/lib/vendor.qti.gnss@3.0.so
 vendor/lib/vendor.qti.gnss@4.0.so
-vendor/lib/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@1.0.so
 vendor/lib64/vendor.qti.gnss@1.1.so
 vendor/lib64/vendor.qti.gnss@1.2.so
@@ -585,7 +572,6 @@ vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib/libbatching.so
 vendor/lib64/libbatching.so
 vendor/lib/libcacertclient.so
@@ -722,15 +708,6 @@ vendor/firmware/a618_gmu.bin
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a640_gmu.bin
-
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service-samsung
-vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|198198b82c376e1370e107d154859f95c8e72f86
-vendor/lib/vendor.samsung.hardware.health@2.0.so
-vendor/lib64/vendor.samsung.hardware.health@2.0.so
 
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
