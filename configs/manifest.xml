@@ -484,15 +484,6 @@
         <fqname>@1.2::ISehSnap/default</fqname>
     </hal>
     <hal format="hidl" optional="true">
-    <name>android.hardware.graphics.composer</name>
-        <transport>hwbinder</transport>
-        <version>2.4</version>
-        <interface>
-            <name>IComposer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>android.hardware.health</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
