@@ -18,6 +18,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IGnss/default</fqname>
+        <fqname>@2.1::IGnss/default</fqname>
+    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
