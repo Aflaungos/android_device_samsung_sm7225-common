@@ -139,21 +139,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti \
-    android.hardware.gnss@2.1.vendor \
-    gps.conf \
-    flp.conf \
-    gnss_antenna_info.conf \
-    libloc_pla_headers \
-    liblocation_api_headers \
-    libgps.utils_headers \
-    liblocation_api \
-    libgps.utils \
-    libbatching \
-    libgeofencing \
-    libloc_core \
-    libgnss
+    android.hardware.gnss@2.1.vendor
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
