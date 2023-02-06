@@ -118,15 +118,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.5-legacy \
+    android.hardware.camera.provider@2.6.vendor \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
-    libgrallocusage.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
+    android.frameworks.cameraservice.service@2.1.vendor \
+    android.hardware.camera.device@3.6.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
@@ -365,7 +364,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson.so
 
 # Radio
 PRODUCT_PACKAGES += \
