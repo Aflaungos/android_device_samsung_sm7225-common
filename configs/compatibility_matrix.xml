@@ -70,12 +70,6 @@
             <instance>qccsyshal</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IGnss/default</fqname>
-        <fqname>@2.1::IGnss/default</fqname>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.sigma_miracast</name>
         <version>1.0</version>
