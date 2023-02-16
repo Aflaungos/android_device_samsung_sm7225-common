@@ -896,7 +896,7 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.bluetooth.a2dp</name>
+        <name>android.hardware.bluetooth.a2dp</name>
         <version>1.0</version>
         <interface>
             <name>ISehBluetoothAudioOffload</name>
