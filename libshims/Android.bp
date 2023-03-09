@@ -14,7 +14,6 @@
 // limitations under the License.
 //
 
-# Media
 cc_library_shared {
     name: "libmedia_helper",
     srcs: ["libmedia_helper.cpp"],
