@@ -408,10 +408,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
     android.hardware.sensors@2.0-ScopedWakelock.vendor
-    
-#Shims
-PRODUCT_PACKAGES += \
-    libmedia_helper
 
 # Touch features
 PRODUCT_PACKAGES += \
