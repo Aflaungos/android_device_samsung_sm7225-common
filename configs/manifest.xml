@@ -63,11 +63,6 @@
     <hal format="hidl" override="true">
         <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
-        <version>2.6</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
         <fqname>@2.4::ICameraProvider/legacy/0</fqname>
         <fqname>@2.6::ICameraProvider/legacy/0</fqname>
     </hal>
@@ -155,11 +150,6 @@
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
-        <version>2.2</version>
-        <interface>
-            <name>ISoundTriggerHw</name>
-            <instance>default</instance>
-        </interface>
         <fqname>@2.0::ISoundTriggerHw/default</fqname>
         <fqname>@2.2::ISoundTriggerHw/default</fqname>
     </hal>
