@@ -28,15 +28,17 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-    <name>android.hardware.power.stats</name>
-    <version>1.0</version>
-    <interface>
-        <name>IPowerStats</name>
-        <instance>default</instance>
-    </interface>
-</hal>
+        <name>android.hardware.power.stats</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPowerStats</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.neuralnetworks</name>
+        <transport>hwbinder</transport>
         <version>1.3</version>
         <interface>
             <name>IDevice</name>
@@ -48,6 +50,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.input.classifier</name>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IInputClassifier</name>
