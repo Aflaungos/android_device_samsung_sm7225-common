@@ -135,7 +135,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
     libgrallocusage.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    vendor.qti.hardware.camera.device@1.0.vendor \
     android.hardware.camera.device@3.6.vendor \
     android.frameworks.cameraservice.service@2.1.vendor
 
