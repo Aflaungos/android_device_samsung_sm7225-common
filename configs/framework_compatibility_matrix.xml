@@ -60,8 +60,11 @@
     <hal format="hidl">
         <name>android.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
-        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
+        <version>2.1</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.configstore</name>
