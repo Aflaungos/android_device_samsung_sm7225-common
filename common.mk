@@ -262,6 +262,11 @@ PRODUCT_PACKAGES += \
 # Input Classifier HAL
 PRODUCT_PACKAGES += \
     android.hardware.input.classifier@1.0-service.default
+    
+# IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 # Keylayout
 PRODUCT_COPY_FILES += \
