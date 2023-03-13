@@ -84,6 +84,16 @@
             <instance>gnss_vendor</instance>
         </interface>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <fqname>@7.0::IDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.bluetooth.a2dp</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IBluetoothAudioOffload/default</fqname>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.keymaster</name>
         <version>4.0</version>
