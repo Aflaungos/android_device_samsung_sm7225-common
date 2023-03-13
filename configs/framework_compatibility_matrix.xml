@@ -12,7 +12,7 @@
         framework_compatibility_matrix.xml
         framework_compatibility_matrix.xml
         vendor.samsung.hardware.hqm@1.0-matrix.xml
-        framework_compatibility_matrix.xml
+        framework_compatibility_matrix.xm
         vendor.samsung.hardware.tlc.iccc@1.0-matrix.xml
         vendor.samsung.hardware.tlc.tima@1.0-matrix.xml
         atn_compatibility_matrix.xml
@@ -87,12 +87,19 @@
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@7.0::IDevicesFactory/default</fqname>
+        <version>6.0</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.bluetooth.a2dp</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IBluetoothAudioOffload/default</fqname>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.bluetooth.a2dp</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehBluetoothAudioOffload</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.keymaster</name>
@@ -920,14 +927,6 @@
         <version>2.0</version>
         <interface>
             <name>ISehBluetooth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.bluetooth.a2dp</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISehBluetoothAudioOffload</name>
             <instance>default</instance>
         </interface>
     </hal>
