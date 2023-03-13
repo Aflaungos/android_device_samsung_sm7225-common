@@ -9,15 +9,6 @@
         </interface>
         <fqname>@1.0::IBluetoothHci/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMotHealth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.neuralnetworks</name>
         <transport>hwbinder</transport>
@@ -28,15 +19,6 @@
             <instance>qti-dsp</instance>
             <instance>qti-gpu</instance>
             <instance>qti-hta</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.input.classifier</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IInputClassifier</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
