@@ -31,12 +31,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.audio</name>
-        <transport>hwbinder</transport>
-        <fqname>@6.0::IDevicesFactory/default</fqname>
-        <fqname>@7.0::IDevicesFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
         <version>6.0</version>
@@ -415,11 +409,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISehBluetooth/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.bluetooth.a2dp</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISehBluetoothAudioOffload/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.camera.provider</name>
