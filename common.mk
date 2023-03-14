@@ -334,7 +334,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
     libstagefright_omx \
     libstagefright_foundation
 
