@@ -250,7 +250,7 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
     android.hidl.memory.block@1.0 \
     android.hidl.memory.block@1.0.vendor
     
@@ -428,7 +428,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor
+    android.hardware.sensors@2.0-ScopedWakelock.vendor \
     sensors.samsung
     
 # Telephony
