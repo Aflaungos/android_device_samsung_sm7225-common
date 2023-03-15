@@ -90,6 +90,8 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libvolumelistener \
     SamsungDAP
+    
+TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
@@ -252,12 +254,16 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    android.hidl.memory.block@1.0 \
+    android.hidl.memory.block@1.0.vendor
     
 # Input Classifier HAL
 PRODUCT_PACKAGES += \
@@ -335,7 +341,9 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_omx \
+    libstagefright_foundation
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -425,7 +433,7 @@ PRODUCT_PACKAGES += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
+    vendor.lineage.touch@1.0-service.sm7225
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -444,11 +452,22 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.sm7225
+    
+# Telephony
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
 
 # Tether
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
+    libipanat \
     android.hardware.tetheroffload.config@1.0.vendor  \
     android.hardware.tetheroffload.control@1.0.vendor
 
