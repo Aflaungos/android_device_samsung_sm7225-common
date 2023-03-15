@@ -1,9 +1,6 @@
 # /sys/devices/platform/soc/soc:battery/power_supply/*
 allow hal_health_default sysfs_battery:file r_file_perms;
 allow hal_health_default sysfs_battery:dir search;
-allow hal_health_default sysfs_hal_health_default:file { read open getattr };
-allow hal_health_default mnt_vendor_file:dir { search write };
-allow hal_health_default mnt_vendor_file:file { read write };
 
 # /efs/Battery
 allow hal_health_default battery_efs_file:dir r_dir_perms;
