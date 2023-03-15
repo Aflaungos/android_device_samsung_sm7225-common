@@ -67,12 +67,19 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl.sm7225 \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio@4.0-service \
+    android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.0-impl \
     android.hardware.soundtrigger@2.2-impl \
     audioadsprpcd \
     audio.primary.default \
+    libstdc++.vendor \
     audio.primary.lito \
+    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     libaudioalsa \
@@ -83,8 +90,6 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libvolumelistener \
     SamsungDAP
-
-TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
@@ -109,11 +114,15 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    libbthost_if \
+    libbthost_if.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.a2dp@1.0-impl \
+    android.hardware.bluetooth.a2dp@1.0-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -210,7 +219,7 @@ PRODUCT_PACKAGES += \
 
 # FastCharge
 PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.sm7225
+    vendor.lineage.fastcharge@1.0-service.samsung
 
 # FM
 PRODUCT_PACKAGES += \
@@ -243,16 +252,12 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor \
-    android.hidl.memory.block@1.0 \
-    android.hidl.memory.block@1.0.vendor
+    libhwbinder.vendor
     
 # Input Classifier HAL
 PRODUCT_PACKAGES += \
@@ -330,7 +335,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw \
+    libstagefrighthw
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -420,7 +425,7 @@ PRODUCT_PACKAGES += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.sm7225
+    vendor.lineage.touch@1.0-service.samsung
 
 # Trust HAL
 PRODUCT_PACKAGES += \
