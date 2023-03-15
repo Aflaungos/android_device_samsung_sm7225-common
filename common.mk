@@ -90,8 +90,6 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libvolumelistener \
     SamsungDAP
-    
-TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
@@ -254,16 +252,12 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor \
-    android.hidl.memory.block@1.0 \
-    android.hidl.memory.block@1.0.vendor
+    libhwbinder.vendor
     
 # Input Classifier HAL
 PRODUCT_PACKAGES += \
