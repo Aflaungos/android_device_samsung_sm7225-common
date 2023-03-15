@@ -210,7 +210,7 @@ PRODUCT_PACKAGES += \
 
 # FastCharge
 PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
+    vendor.lineage.fastcharge@1.0-service.sm7225
 
 # FM
 PRODUCT_PACKAGES += \
@@ -253,10 +253,6 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     android.hidl.memory.block@1.0 \
     android.hidl.memory.block@1.0.vendor
-    
-# HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
     
 # Input Classifier HAL
 PRODUCT_PACKAGES += \
@@ -335,8 +331,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw \
-    libstagefright_omx \
-    libstagefright_foundation
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -422,18 +416,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    sensors.samsung
-    
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
+    android.hardware.sensors@2.0-ScopedWakelock.vendor
 
 # Touch features
 PRODUCT_PACKAGES += \
@@ -461,7 +444,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
-    libipanat \
     android.hardware.tetheroffload.config@1.0.vendor  \
     android.hardware.tetheroffload.control@1.0.vendor
 
@@ -512,9 +494,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
-
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
@@ -528,7 +507,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/odm.prop
 
 # Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/sm7225-common/sm7225-common-vendor.mk)
