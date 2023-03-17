@@ -150,6 +150,15 @@
         <fqname>@1.5::IRadio/slot1</fqname>
         <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.ir</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IConsumerIr</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
