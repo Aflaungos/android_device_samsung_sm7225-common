@@ -41,3 +41,7 @@ allow rild proc_net:file rw_file_perms;
 allow rild tun_device:chr_file rw_file_perms;
 allowxperm rild tun_device:chr_file ioctl { 0x54ca 0x54cb };
 allow rild self:tun_socket create;
+
+# /proc/25587/cmdline
+allow rild init:dir { search };
+allow rild init:file { read open getattr };
