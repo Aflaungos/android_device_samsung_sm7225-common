@@ -24,10 +24,10 @@ allow init vndservicemanager:binder { transfer call };
 allow init hwservicemanager:binder { call };
 
 # /vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
-allow init vendor_file:file { execute };
+allow init vendor_file:file { execute_no_trans };
 
 # sysfs
 allow init sysfs:file { read open };
 
 # /dev/binderfs/vndbinder
-allow init vndbinder_device:chr_file { ioctl map };
+allow init vndbinder_device:chr_file { ioctl map write open read };
