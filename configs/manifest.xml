@@ -32,7 +32,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport
+        <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
             <name>IGnss</name>
