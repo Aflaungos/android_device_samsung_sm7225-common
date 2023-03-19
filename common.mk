@@ -248,7 +248,6 @@ PRODUCT_COPY_FILES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
@@ -436,11 +435,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3 \
-    android.hardware.usb@1.3.vendor \
-    android.hardware.usb@1.3-service-qti \
-    android.hardware.usb.gadget@1.0-impl \
-    android.hardware.usb.gadget@1.0-service
+    android.hardware.usb@1.3-service-qti
 
 # Vibrator
 PRODUCT_PACKAGES += \
