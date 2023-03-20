@@ -200,26 +200,10 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.class_core.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.class_core.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.mdm.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := bin/init.mdm.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qcom.coex.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qcom.coex.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
@@ -232,34 +216,10 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qcom.efs.sync.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qcom.efs.sync.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.post_boot.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := bin/init.qcom.post_boot.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qcom.sdio.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qcom.sdio.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qcom.sensors.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qcom.sensors.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
@@ -272,41 +232,9 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qcom.usb.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.qcom.usb.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qti.chg_policy.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := bin/init.qti.chg_policy.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qti.dcvs.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qti.dcvs.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qti.early_init.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qti.early_init.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qti.qcv.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.qti.qcv.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/bin
 include $(BUILD_PREBUILT)
