@@ -24,7 +24,7 @@ allow init vndservicemanager:binder { transfer call };
 allow init hwservicemanager:binder { call };
 
 # /vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
-allow init vendor_file:file { execute_no_trans };
+allow init vendor_file:file { execute };
 
 # sysfs
 allow init sysfs:file { read open };
