@@ -1,3 +1,0 @@
-# /vendor/bin/hw/rild
-allow rild init:dir { search };
-allow rild init:file { read open getattr };
