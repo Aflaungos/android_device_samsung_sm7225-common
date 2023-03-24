@@ -169,6 +169,7 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libtinyxml \
+    libtinyxml2 \
     libvulkan \
     hwcomposer.lito \
     gralloc.lito \
