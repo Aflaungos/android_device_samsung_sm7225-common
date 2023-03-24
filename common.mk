@@ -301,6 +301,8 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.samsung \
     libnfc-nci \
     libnfc_nci_jni \
+    libNfcProperties \
+    nfc_nci_nxpsn \
     NfcNci \
     Tag
 
