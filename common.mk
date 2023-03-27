@@ -304,7 +304,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    nxp.android.hardware.nfc@1.2-service.samsung \
+    android.hardware.nfc@1.2-service.samsung \
     libnfc-nci \
     libNfcProperties \
     nfc_nci_nxpsn \
