@@ -189,7 +189,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
-    AdvancedDisplay
+    AdvancedDisplay \
+    libion \
+    libfimg
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -203,7 +205,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7225
+    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7225 \
+    fingerprintd \
+    libbauthtzcommon_shim \
+    fingerprint.sm7225
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -406,7 +411,17 @@ PRODUCT_PACKAGES += \
     libxml2 \
     librilutils \
     librmnetctl \
-    secril_config_svc
+    secril_config_svc \
+    libsecril-client \
+    libsecril-client-sap \
+    modemloader \
+    SamsungServiceMode
+    
+# IPv6
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -470,6 +485,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal \
     libwifi-hal-qcom \
     libwpa_client \
+    macloader \
     WifiOverlay \
     TetheringConfigOverlay \
     wpa_cli \
