@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
 # Vendor scripts
 PRODUCT_PACKAGES += \
     init.class_main.sh \
+    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     init.qti.chg_policy.sh
@@ -161,11 +162,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.1 \
+    android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@2.0.vendor \
     android.hardware.graphics.mapper@2.1.vendor \
     android.hardware.graphics.mapper@3.0.vendor \
-    gralloc.default \
     libsdmcore \
     libsdmutils \
     libtinyxml \
@@ -175,9 +175,7 @@ PRODUCT_PACKAGES += \
     gralloc.lito \
     memtrack.lito \
     libqdMetaData \
-    libqdMetaData.system \
     libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.mapper@1.0.vendor \
@@ -233,12 +231,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc
+
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc
 
 # Health
 PRODUCT_PACKAGES += \
@@ -267,10 +265,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor
-
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -383,7 +377,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
+    android.hardware.power-service.samsung-libperfmgr \
     android.hardware.power@1.2.vendor
 
 PRODUCT_COPY_FILES += \
