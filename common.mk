@@ -406,6 +406,7 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl \
     secril_config_svc \
+    libsec-ril \
     libsecril-client \
     libsecril-client-sap \
     modemloader \
