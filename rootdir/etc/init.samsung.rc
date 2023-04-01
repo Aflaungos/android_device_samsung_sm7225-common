@@ -116,6 +116,10 @@ on post-fs
     chmod 0771 /efs
     restorecon /efs
 
+    # Import from /odm
+    chown radio system /efs/imei/countryiso_code.json
+    chmod 0664 /efs/imei/countryiso_code.json
+
 # Permissions for Power
    chown radio system /sys/module/lpm_levels/parameters/secdebug
    chmod 664 /sys/module/lpm_levels/parameters/secdebug
