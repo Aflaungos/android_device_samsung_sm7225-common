@@ -166,14 +166,61 @@ on early-boot
     chown system system /sys/class/sec/tsp/input/enabled
     chmod 0660 /sys/class/sec/tsp/input/enabled
     chown system system /sys/class/sec/tsp/enabled
+    chmod 0660 /sys/class/sec/tsp/enabled
     chown root system /proc/tsp_msg
     chmod 0440 /proc/tsp_msg
-    chown system system /dev/tspio
-    chown system system /sys/class/sec/tsp/ear_detect_enable
-    chown system system /sys/class/sec/tsp/hw_param
-    chown system system /sys/class/sec/tsp/virtual_prox
+    chown system radio /sys/class/sec/tsp/pressure_enable
+    chown system system /sys/class/sec/tsp/multi_count
+    chown system system /sys/class/sec/tsp/wet_mode
+    chown system system /sys/class/sec/tsp/noise_mode
+    chown system system /sys/class/sec/tsp/comm_err_count
+    chown system system /sys/class/sec/tsp/checksum
+    chown system system /sys/class/sec/tsp/holding_time
+    chown system system /sys/class/sec/tsp/all_touch_count
+    chown system system /sys/class/sec/tsp/z_value
     chown system system /sys/class/sec/tsp/sensitivity_mode
     chown system system /sys/class/sec/tsp/prox_power_off
+    chown system system /sys/class/sec/tsp/irq_recovery_count
+    chown system system /sys/class/sec/tsp/ic_reset_count
+    chown system system /sys/class/sec/tsp/mode_change_failed_count
+    chown system system /sys/class/sec/sec_key/key_pressed_count
+    chown system system /dev/tspio
+    chown system system /sys/class/sec/tsp/ear_detect_enable
+    chown system system /sys/class/sec/tsp/ta_mode
+    chown system system /sys/class/sec/tsp/virtual_prox
+    chown system system /sys/class/sec/tsp/hw_param
+
+    # Permissions for Touchscreen-1
+    chown system radio /sys/class/sec/tsp1/cmd
+    chown system system /sys/class/sec/tsp1/input/enabled
+    chmod 0660 /sys/class/sec/tsp/input1/enabled
+    chown system system /sys/class/sec/tsp1/multi_count
+    chown system system /sys/class/sec/tsp1/wet_mode
+    chown system system /sys/class/sec/tsp1/noise_mode
+    chown system system /sys/class/sec/tsp1/comm_err_count
+    chown system system /sys/class/sec/tsp1/checksum
+    chown system system /sys/class/sec/tsp1/all_touch_count
+    chown system system /sys/class/sec/tsp1/z_value
+    chown system system /sys/class/sec/tsp1/sensitivity_mode
+    chown system system /sys/class/sec/tsp1/prox_power_off
+    chown system system /sys/class/sec/tsp1/ic_reset_count
+    chown system system /sys/class/sec/tsp1/mode_change_failed_count
+
+    # Permissions for Touchscreen-2
+    chown system radio /sys/class/sec/tsp2/cmd
+    chown system system /sys/class/sec/tsp2/input/enabled
+    chmod 0660 /sys/class/sec/tsp/input2/enabled
+    chown system system /sys/class/sec/tsp2/multi_count
+    chown system system /sys/class/sec/tsp2/wet_mode
+    chown system system /sys/class/sec/tsp2/noise_mode
+    chown system system /sys/class/sec/tsp2/comm_err_count
+    chown system system /sys/class/sec/tsp2/checksum
+    chown system system /sys/class/sec/tsp2/all_touch_count
+    chown system system /sys/class/sec/tsp2/z_value
+    chown system system /sys/class/sec/tsp2/sensitivity_mode
+    chown system system /sys/class/sec/tsp2/prox_power_off
+    chown system system /sys/class/sec/tsp2/ic_reset_count
+    chown system system /sys/class/sec/tsp2/mode_change_failed_count
  
  # Permission for Securetouch
     chown system system /sys/class/sec/ss_touch/secure/secure_touch_enable
@@ -527,6 +574,15 @@ on boot
     chmod 664 /sys/module/qpnp_power_on/parameters/reset_enabled
     chown radio system /sys/module/qpnp_power_on/parameters/wake_enabled
     chmod 664 /sys/module/qpnp_power_on/parameters/wake_enabled
+
+# Permissions for Input Booster
+    chown system system /sys/class/input_booster/touch/level
+    chown system system /sys/class/input_booster/touch/head
+    chown system system /sys/class/input_booster/touch/tail
+    chown system system /sys/class/input_booster/multitouch/head
+    chown system system /sys/class/input_booster/multitouch/tail
+    chown system system /sys/class/input_booster/multitouch/level
+    chown system system /sys/class/input_booster/ib_mode_state
 
 # Permissions for SystemPerformance
     chown root system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
