@@ -291,21 +291,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
-# NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.samsung \
-    libnfc-nci \
-    libNfcProperties \
-    nfc_nci_nxpsn \
-    nfc_nci_nxpsn_jni \
-    NfcNci \
-    Tag
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/nfc/libnfc-nxp_RF.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/nfc/libnfc-sec-vendor.conf
-
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.omx@1.0-service \
