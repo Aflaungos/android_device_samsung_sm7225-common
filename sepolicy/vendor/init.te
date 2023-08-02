@@ -8,17 +8,11 @@ allow init debugfs_tracing_debug:dir { mounton };
 # /mnt/vendor/efs
 allow init efs_file:dir { mounton };
 
-# /dev/qseecom
-allow init tee_device:chr_file { ioctl read write open };
-
 # ion
 allow init ion_device:chr_file { read open ioctl };
 
 # rild (00564E445F4D756C7469636C69656E74)
 allow init rild:unix_stream_socket { connectto };
-
-# /vendor/bin/emservice
-allow init vndservicemanager:binder { transfer call };
 
 # android.hardwar
 allow init hwservicemanager:binder { call };
@@ -26,8 +20,3 @@ allow init hwservicemanager:binder { call };
 # /vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 allow init vendor_file:file { execute };
 
-# sysfs
-allow init sysfs:file { read open };
-
-# /dev/binderfs/vndbinder
-allow init vndbinder_device:chr_file { ioctl map write open read };
