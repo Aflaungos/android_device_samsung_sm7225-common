@@ -21,6 +21,14 @@
             <instance>qti-hta</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="false">
+        <name>android.hardware.graphics.composer</name>
+        <version>2.1-4</version>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.nfc</name>
         <transport>hwbinder</transport>
