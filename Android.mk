@@ -44,14 +44,6 @@ $(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(FIRMWARE_MODEM_MOUNT_POINT)
 
-CNEAPP_SYMLINKS := $(TARGET_OUT_VENDOR)/app/CneApp/lib/arm64
-$(CNEAPP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating CNEAPP folder structure $@"
-	@rm -rf $@
-	@mkdir -p $(dir $@)/vendor/lib64
-	@mkdir -p $(dir $@)/arm64
-	$(hide) ln -sf /vendor/lib64/libvndfwk_detect_jni.qti.so $@/libvndfwk_detect_jni.qti.so
-
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM ADSP folder structure: $@"
@@ -198,7 +190,6 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MDM_SLPI_SYMLINKS) \
     $(RFS_MDM_TN_SYMLINKS) \
     $(RFS_APQ_GNSS_SYMLINKS) \
-    $(CNEAPP_SYMLINKS) \
     $(EGL_32_SYMLINKS) \
     $(EGL_64_SYMLINKS)
 
