@@ -31,22 +31,16 @@ FIRMWARE_MODEM_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware-modem
 $(FIRMWARE_MODEM_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(FIRMWARE_MODEM_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/firmware-modem
-	@echo "Creating firmware-modem symlink"
-	$(hide) ln -sf /vendor/firmware-modem $(TARGET_OUT_ROOT)/firmware-modem
 
 BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
 $(BT_FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
-	@echo "Creating bt_firmware symlink"
-	$(hide) ln -sf /vendor/bt_firmware $(TARGET_OUT_ROOT)/bt_firmware
 
 DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
 $(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(DSP_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
-	@echo "Creating dsp symlink"
-	$(hide) ln -sf /vendor/dsp $(TARGET_OUT_ROOT)/dsp
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(FIRMWARE_MODEM_MOUNT_POINT)
 
