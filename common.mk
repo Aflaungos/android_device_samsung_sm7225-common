@@ -144,10 +144,6 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
-    
-# Dumpstate
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-lazy
 
 # GNSS
 PRODUCT_PACKAGES += \
