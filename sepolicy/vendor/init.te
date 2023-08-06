@@ -1,5 +1,10 @@
 # init.te
 
+# AOSP init only covers system_block_device, add our own:
+allow init {
+    dtbo_block_device
+}:{ blk_file lnk_file } relabelto;
+
 allow init proc_last_kmsg:file { setattr };
 
 # /sys/kernel/tracing
