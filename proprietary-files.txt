@@ -65,6 +65,7 @@ vendor/lib/btaudio_offload_if.so
 vendor/lib/libaudioparsers.so
 vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/hw/audio.primary.lito.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libaudio_log_utils.so
@@ -100,6 +101,8 @@ vendor/lib/libdrc.so
 vendor/lib/libspkrprot.so
 
 # Soundtrigger
+vendor/lib/hw/sound_trigger.primary.lito.so
+vendor/lib64/hw/sound_trigger.primary.lito.so
 vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libgcs.so
 vendor/lib/libgcs-ipc.so
@@ -724,6 +727,15 @@ vendor/firmware/a618_gmu.bin
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a640_gmu.bin
+
+# Health
+vendor/bin/hw/android.hardware.health@2.1-service-samsung
+vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
+-vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
+vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
+vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so
+vendor/lib/vendor.samsung.hardware.health@2.0.so
+vendor/lib64/vendor.samsung.hardware.health@2.0.so
 
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
