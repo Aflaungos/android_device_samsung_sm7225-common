@@ -61,7 +61,6 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr) {
     set(TSP_CMD_PATH, "set_fod_rect,270,1400,450,1530");
 
     std::ifstream in("/sys/class/fingerprint/fingerprint/position");
-    mIsUdfps = !!in;
     if (in)
         in.close();
 
@@ -108,10 +107,6 @@ BiometricsFingerprint::~BiometricsFingerprint() {
     if (ss_fingerprint_close() != 0) {
         LOG(ERROR) << "Can't close HAL module";
     }
-}
-
-Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
-    return mIsUdfps;
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
