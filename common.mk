@@ -78,7 +78,6 @@ PRODUCT_PACKAGES += \
     audio.primary.lito \
     audio.r_submix.default \
     audio.usb.default \
-    libaudioalsa \
     libtinycompress \
     sound_trigger.primary.lito \
     libqcomvisualizer \
@@ -292,7 +291,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    android.hardware.omx@1.0-service \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -394,7 +392,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.samsung-multihal \
+    android.hardware.sensors-service.samsung-multihal \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     sensors.samsung
     
