@@ -76,7 +76,6 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     libstdc++.vendor \
     audio.primary.lito \
-    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     libaudioalsa \
