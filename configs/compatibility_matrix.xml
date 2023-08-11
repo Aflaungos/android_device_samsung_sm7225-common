@@ -145,9 +145,9 @@
         </interface>
     </hal>
     <vendor-ndk>
-        <version>32</version>
+        <version>33</version>
     </vendor-ndk>
     <system-sdk>
-        <version>32</version>
+        <version>33</version>
     </system-sdk>
 </compatibility-matrix>
