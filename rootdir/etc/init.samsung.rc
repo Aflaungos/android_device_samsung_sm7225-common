@@ -625,12 +625,6 @@ on boot
 # Permissions for recovery_cause
     chown root system /sys/class/sec/sec_debug/recovery_cause
 
-service factory_ssc /vendor/bin/factory.ssc
-    class core
-    user system
-    group system radio inet diag net_admin net_raw sdcard_rw sdcard_r media_rw
-    disabled
-
 # FINGERPRINT FRAMEWORK : starts goodixfingerprintd
 service goodixd /vendor/bin/goodixfingerprintd
     class late_start
