@@ -75,11 +75,9 @@ PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.primary.default \
     libstdc++.vendor \
-    audio.primary.lito \
     audio.r_submix.default \
     audio.usb.default \
     libtinycompress \
-    sound_trigger.primary.lito \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
@@ -109,19 +107,13 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbthost_if \
-    libbthost_if.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.a2dp@1.0-impl \
-    android.hardware.bluetooth.a2dp@1.0-service
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.6-service.sm7225 \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.5-legacy \
     android.hardware.camera.provider@2.6.vendor \
@@ -142,10 +134,6 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
-    
-# Dumpstate
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-lazy
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -190,16 +178,12 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey \
     libdrmclearkeyplugin \
     android.hardware.drm@1.3.vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7225 \
-    fingerprintd \
-    libbauthtzcommon_shim \
-    fingerprint.sm7225
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -383,12 +367,6 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl \
     secril_config_svc
-    
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -455,7 +433,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal \
     libwifi-hal-qcom \
     libwpa_client \
-    macloader \
     WifiOverlay \
     TetheringConfigOverlay \
     wpa_cli \
