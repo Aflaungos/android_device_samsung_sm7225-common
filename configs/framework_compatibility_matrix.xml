@@ -11,6 +11,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
+        <version>1</version>
         <transport>hwbinder</transport>
         <fqname>@1.0::ISensors/default</fqname>
         <fqname>@2.1::ISensors/default</fqname>
