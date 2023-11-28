@@ -22,8 +22,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    </hal>
-        <hal format="hidl" optional="false">
+    <hal format="hidl" optional="false">
         <name>android.hardware.keymaster</name>
         <version>4.0</version>
         <interface>
@@ -31,7 +30,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-     <hal format="hidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.audio.effect</name>
         <version>6.0</version>
         <interface>
