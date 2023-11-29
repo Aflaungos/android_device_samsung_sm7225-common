@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -27,7 +27,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "m23xq a42xq"
+write_headers "m23xq"
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
