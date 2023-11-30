@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.6-service_64.samsung-sm7225 \
+    android.hardware.camera.provider@2.6-service.samsung-sm7225 \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.5-legacy \
     android.hardware.camera.provider@2.6.vendor \

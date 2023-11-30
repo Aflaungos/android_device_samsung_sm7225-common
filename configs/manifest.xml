@@ -433,16 +433,6 @@
         <fqname>@2.0::ISehBluetooth/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
-        <interface>
-            <name>ISehCameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-        <fqname>@4.0::ISehCameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>2.2</version>

@@ -15,7 +15,7 @@
 
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.6-service_64.samsung-sm7225",
+    name: "android.hardware.camera.provider@2.6-service.samsung-sm7225",
     defaults: [
         "hidl_defaults",
     ],
@@ -26,7 +26,7 @@ cc_binary {
         "SamsungCameraProvider.cpp",
         "service.cpp"
     ],
-    init_rc: ["android.hardware.camera.provider@2.6-service_64.samsung-sm7225.rc"],
+    init_rc: ["android.hardware.camera.provider@2.6-service.samsung-sm7225.rc"],
     shared_libs: [
         "android.hardware.camera.provider@2.4",
         "android.hardware.camera.provider@2.4-legacy",
