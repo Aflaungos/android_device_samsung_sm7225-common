@@ -56,7 +56,7 @@ void vendor_load_properties()
         device = "m23xq";
     }
 
-    name = device + "nsxx";
+    name = device + "xx";
 
     LOG(INFO) << "Found bootloader: " << bootloader;
     LOG(INFO) << "Setting ro.product.model: " << model;
