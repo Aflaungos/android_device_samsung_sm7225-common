@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2019-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,8 +25,8 @@
 #include <hidl/HidlTransportSupport.h>
 
 #include "AdaptiveBacklight.h"
-#include "DisplayModes.h"
 #include "SunlightEnhancement.h"
+#include "DisplayColorCalibration.h"
 
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
@@ -35,13 +35,13 @@ using android::status_t;
 using android::OK;
 
 using vendor::lineage::livedisplay::V2_0::samsung::AdaptiveBacklight;
-using vendor::lineage::livedisplay::V2_0::samsung::DisplayModes;
 using vendor::lineage::livedisplay::V2_0::samsung::SunlightEnhancement;
+using vendor::lineage::livedisplay::V2_0::samsung::DisplayColorCalibration;
 
 int main() {
     sp<AdaptiveBacklight> adaptiveBacklight;
-    sp<DisplayModes> displayModes;
     sp<SunlightEnhancement> sunlightEnhancement;
+    sp<DisplayColorCalibration> displayColorCalibration;
     status_t status;
 
     LOG(INFO) << "LiveDisplay HAL service is starting.";
@@ -53,16 +53,17 @@ int main() {
         goto shutdown;
     }
 
-    displayModes = new DisplayModes();
-    if (displayModes == nullptr) {
-        LOG(ERROR) << "Can not create an instance of LiveDisplay HAL DisplayModes Iface, exiting.";
-        goto shutdown;
-    }
-
     sunlightEnhancement = new SunlightEnhancement();
     if (sunlightEnhancement == nullptr) {
         LOG(ERROR)
             << "Can not create an instance of LiveDisplay HAL SunlightEnhancement Iface, exiting.";
+        goto shutdown;
+    }
+
+    displayColorCalibration = new DisplayColorCalibration();
+    if (displayColorCalibration == nullptr) {
+        LOG(ERROR) << "Can not create an instance of LiveDisplay HAL DisplayColorCalibration "
+                      "Iface, exiting.";
         goto shutdown;
     }
 
@@ -77,20 +78,21 @@ int main() {
         }
     }
 
-    if (displayModes->isSupported()) {
-        status = displayModes->registerAsService();
-        if (status != OK) {
-            LOG(ERROR) << "Could not register service for LiveDisplay HAL DisplayModes Iface ("
-                       << status << ")";
-            goto shutdown;
-        }
-    }
-
     if (sunlightEnhancement->isSupported()) {
         status = sunlightEnhancement->registerAsService();
         if (status != OK) {
             LOG(ERROR)
                 << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface ("
+                << status << ")";
+            goto shutdown;
+        }
+    }
+
+    if (displayColorCalibration->isSupported()) {
+        status = displayColorCalibration->registerAsService();
+        if (status != OK) {
+            LOG(ERROR)
+                << "Could not register service for LiveDisplay HAL DisplayColorCalibration Iface ("
                 << status << ")";
             goto shutdown;
         }
