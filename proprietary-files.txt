@@ -1,4 +1,4 @@
-# All blobs are from M236BXXUCWF3, unless pinned
+# All blobs are from M236BXXUCWI5, unless pinned
 
 # ACDB
 vendor/lib/libacdb-fts.so
@@ -25,6 +25,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libSNPE.so
+vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
 vendor/lib64/libsnpe_wrapper.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
@@ -36,6 +37,7 @@ vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
@@ -80,9 +82,11 @@ vendor/lib/libhfp.so
 vendor/lib/libqtigef.so
 vendor/lib64/libqtigef.so
 vendor/lib/libcirrusspkrprot.so
+vendor/lib/libprofileparamstorage.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libdrc.so
 vendor/lib/libspkrprot.so
+vendor/etc/audio_tuning_mixer.txt
 
 # Soundtrigger
 vendor/lib/hw/sound_trigger.primary.lito.so
@@ -110,6 +114,8 @@ vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libqcbassboost.so
+system_ext/etc/permissions/audiosphere.xml
+system_ext/framework/audiosphere.jar
 
 # Audio Firmware
 vendor/firmware/dax_param.bin
@@ -217,7 +223,7 @@ vendor/lib/libscveCommon_stub.so
 vendor/lib/libqcwrappercommon.so
 vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libsocial_image_enhancement.uniplugin@1.0.so
-vendor/lib/libcamxfdalgov8.so
+vendor/lib/libcamxfdalgo.so
 vendor/lib/camera/com.samsung.sensormodule.8_1_lsi_s5kgd2_full.bin
 vendor/lib/camera/com.samsung.sensormodule.8_0_sony_imx616_full.bin
 vendor/lib/camera/w_dual_calibration.bin
@@ -281,7 +287,6 @@ vendor/lib/camera/com.samsung.sensor.s5k3l6.so
 vendor/lib/camera/com.samsung.tuned.lsi_gc5035_macro.bin
 vendor/lib/camera/com.samsung.sensor.hi1336.so
 vendor/lib/libsegmentationeffect.uniplugin@1.0.so
-vendor/lib/libcamxfdalgov7.so
 vendor/lib/libscveObjectTracker_stub.so
 vendor/lib/libBeauty_v4.camera.samsung.so
 vendor/lib/libhypermotion_core.so
@@ -360,7 +365,7 @@ vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libqcwrappercommon.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
-vendor/lib64/libcamxfdalgov8.so
+vendor/lib64/libcamxfdalgo.so
 vendor/lib64/camera/com.samsung.sensormodule.8_1_lsi_s5kgd2_full.bin
 vendor/lib64/camera/com.samsung.sensormodule.8_0_sony_imx616_full.bin
 vendor/lib64/camera/com.samsung.tuned.lsi_s5kgd2.bin
@@ -418,7 +423,6 @@ vendor/lib64/camera/com.qti.eeprom.sec2qcconversion.so
 vendor/lib64/camera/com.samsung.sensor.hi1336.so
 vendor/lib64/libsegmentationeffect.uniplugin@1.0.so
 vendor/lib64/libLocalTM_wrapper.camera.samsung.so
-vendor/lib64/libcamxfdalgov7.so
 vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libBeauty_v4.camera.samsung.so
 vendor/lib64/libhypermotion_core.so
@@ -453,15 +457,43 @@ vendor/lib64/libmpbase.so
 vendor/lib64/libLocalTM_capture_core.camera.samsung.so
 vendor/lib64/liblow_light_hdr.so
 vendor/lib64/libvdis_core.so
-vendor/lib64/unihal_main@1.3.so
-vendor/lib64/unihal_cutils@1.3.so
+vendor/lib64/unihal_main@2.1.so
+vendor/lib64/unihal_cutils@2.1.so
 vendor/lib64/unihal_uniplugin@1.0.so
 vendor/lib64/libface_landmark.arcsoft.so
+vendor/lib/libofflinelog.so
+vendor/lib64/libofflinelog.so
+vendor/lib/libcamximageformatutils.so
+vendor/lib64/libcamximageformatutils.so
+vendor/lib/libcamxfacialfeatures.so
+vendor/lib64/libcamxfacialfeatures.so
+vendor/lib/vendor.qti.hardware.camera.postproc@1.0.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
+vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib/libchilog.so
+vendor/lib64/libchilog.so
+vendor/lib/libtriplecam_image_optical_zoom.so
+vendor/lib64/libtriplecam_image_optical_zoom.so
+vendor/lib/libbitmlengine.so
+vendor/lib64/libbitmlengine.so
+vendor/lib/libcamerapostproc.so
+vendor/lib64/libcamerapostproc.so
+vendor/lib/libcamxexternalformatutils.so
+vendor/lib64/libcamxexternalformatutils.so
+vendor/lib/libipebpsstriping.so
+vendor/lib64/libipebpsstriping.so
+vendor/lib/libcamxifestriping.so
+vendor/lib64/libcamxifestriping.so
+
+# Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/multical.bin
 
 # Charger
 vendor/bin/hvdcp_opti
 vendor/etc/charger_fstab.qti
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -485,12 +517,6 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsysmon_cdsp_skel.so
-
-# Configstore
-vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
-vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
-vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # CVP (DSP)
 vendor/lib/libcvp_common.so
@@ -665,6 +691,8 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/libC2D2.so
 vendor/lib64/libC2D2.so
 vendor/lib/libCB.so
+vendor/lib/libdisplayskuutils.so
+vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libCB.so
 vendor/lib/libOpenCL.so
 vendor/lib64/libOpenCL.so
@@ -684,9 +712,12 @@ vendor/lib/libpvr.so
 vendor/lib64/libpvr.so
 vendor/lib/libqseed3.so
 vendor/lib64/libqseed3.so
+vendor/etc/display/advanced_sf_offsets.xml
+
 # Vulkan
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
+
 # Adreno
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so
@@ -740,6 +771,13 @@ vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libreffeature.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmeters.so
+
+# Media
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
+vendor/etc/media_lagoon/video_system_specs.json
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 
 # Neuralnetworks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
@@ -951,11 +989,9 @@ vendor/lib64/libvkmanager_vendor.so
 vendor/lib/libxml.so
 vendor/lib64/libxml.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
-vendor/lib64/vendor.samsung.hardware.radio@2.2.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib/libqcmaputils.so
@@ -970,8 +1006,7 @@ vendor/bin/factory.ssc
 vendor/bin/sscrpcd
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/sensors/config/atoll_default_sensors.json
-vendor/etc/sensors/config/atoll_dynamic_sensors.json
-vendor/etc/sensors/config/atoll_lsm6dso_0.json
+vendor/etc/sensors/config/bitra_lsm6dsm_0.json
 vendor/etc/sensors/config/atoll_qrd_stk31610_0.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
@@ -991,6 +1026,7 @@ vendor/etc/sensors/config/sns_distance_bound.json
 vendor/etc/sensors/config/sns_dpc.json
 vendor/etc/sensors/config/sns_facing.json
 vendor/etc/sensors/config/sns_fmv.json
+vendor/etc/sensors/config/sns_fmv_legacy.json
 vendor/etc/sensors/config/sns_geomag_rv.json
 vendor/etc/sensors/config/sns_gyro_cal.json
 vendor/etc/sensors/config/sns_heart_rate.json
@@ -1088,12 +1124,6 @@ vendor/lib64/libSecureUILib.so
 vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
-
-# Trusted User Interface (TUI)
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Wifi
 vendor/bin/cnss-daemon
