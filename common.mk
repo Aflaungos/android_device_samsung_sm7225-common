@@ -36,9 +36,9 @@ AB_OTA_UPDATER := false
 # Init files and fstab
 PRODUCT_PACKAGES += \
     fstab.default \
-    fstab.default.ramdisk \
     fstab.ramplus \
     init.qcom.rc \
+    init.qti.media.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
@@ -59,52 +59,46 @@ PRODUCT_PACKAGES += \
 # Vendor scripts
 PRODUCT_PACKAGES += \
     init.class_main.sh \
+    init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qti.chg_policy.sh
+    init.qti.media.sh \
+    init.qti.chg_policy.sh \
+    init.qti.qcv.sh
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default \
+    $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl.samsung-sm7225 \
     android.hardware.audio.effect@6.0-impl \
-    android.hardware.soundtrigger@2.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    audioadsprpcd \
-    audio.primary.default \
-    libstdc++.vendor \
-    audio.primary.lito \
+    android.hardware.soundtrigger@2.2-impl \
     audio.r_submix.default \
     audio.usb.default \
     libtinycompress \
-    sound_trigger.primary.lito \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
     libvolumelistener \
-    SamsungDAP
+    audio_parameter_service.samsung_sm7325
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
-    $(COMMON_PATH)/configs/audio/audio_configs_stock.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs_stock.xml \
-    $(COMMON_PATH)/configs/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(COMMON_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf\
     $(COMMON_PATH)/configs/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(COMMON_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
     $(COMMON_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(COMMON_PATH)/configs/audio/mixer_usb_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_default.xml \
-    $(COMMON_PATH)/configs/audio/mixer_usb_gray.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_gray.xml \
     $(COMMON_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
     $(COMMON_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -131,8 +125,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.5-impl \
     libgrallocusage.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.frameworks.cameraservice.service@2.1.vendor
+    android.hardware.camera.device@3.6.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
@@ -141,10 +134,6 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
-    
-# Dumpstate
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-lazy
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -160,28 +149,25 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.allocator-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.1.vendor \
-    android.hardware.graphics.composer@2.2.vendor \
-    android.hardware.graphics.composer@2.3.vendor \
-    android.hardware.graphics.composer@2.4.vendor \
-    android.hardware.graphics.mapper@2.0.vendor \
-    android.hardware.graphics.mapper@2.1.vendor \
-    android.hardware.graphics.mapper@3.0.vendor \
+    init.qti.display_boot.rc \
+    init.qti.display_boot.sh \
     libtinyxml \
     libtinyxml2 \
-    gralloc.lito \
-    memtrack.lito \
+    gralloc.default \
+    memtrack.default \
     libqdMetaData \
     libdisplayconfig.qti \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@2.0.vendor
+    vendor.display.config@2.0.vendor \
+    AdvancedDisplay
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -195,10 +181,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service-samsung.sm7225 \
-    fingerprintd \
-    libbauthtzcommon_shim \
-    fingerprint.sm7225
+    android.hardware.biometrics.fingerprint@2.3-service.samsung
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -208,28 +191,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
 
-# FM
+# Lineage Health
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio \
-    qcom.fmradio.xml
+    vendor.lineage.health-service.default
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.secure_element@1.1-service
+    android.hardware.gatekeeper@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc
-
-# Network
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -290,6 +266,10 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
+    libstagefright_bufferpool@2.0.1.vendor \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -297,11 +277,7 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
     libstagefrighthw \
-    libstagefright_omx \
-    libstagefright_foundation
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -382,12 +358,6 @@ PRODUCT_PACKAGES += \
     librilutils \
     librmnetctl \
     secril_config_svc
-    
-# IPv6
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
-    libebtc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -458,7 +428,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal \
     libwifi-hal-qcom \
     libwpa_client \
-    macloader \
     WifiOverlay \
     TetheringConfigOverlay \
     wpa_cli \
@@ -498,6 +467,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/samsung \
     hardware/samsung/nfc \
     hardware/samsung/aidl/power-libperfmgr

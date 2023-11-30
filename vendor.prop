@@ -84,9 +84,6 @@ ro.camera.notify_nfc=1
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM7225
 
-# Cne
-persist.vendor.cne.feature=1
-
 # Crypto
 ro.crypto.metadata_init_delete_all_keys.enabled=false
 ro.crypto.volume.filenames_mode=aes-256-cts
@@ -135,15 +132,6 @@ ro.hardware.vulkan=adreno
 ro.hardware.egl=adreno
 ro.opengles.version=196610
 
-# Dpm
-persist.vendor.dpmhalservice.enable=1
-
-# Drm
-drm.service.enabled=true
-
-# Fingerprint
-persist.vendor.qfp=true
-
 # Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 
@@ -155,24 +143,8 @@ ro.security.keystore.keytype=sakv2,gak
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec=1
 
-# Nfc
-ro.vendor.nfc.feature.chipname=NXP_SN100U
-ro.vendor.nfc.support.advancedsetting=false
-ro.vendor.nfc.support.autoselect=true
-ro.vendor.nfc.support.defaultaid=true
-ro.vendor.nfc.support.nonaid=true
-ro.vendor.nfc.support.othercategory=true
-ro.vendor.nfc.support.uicc=true
-ro.vendor.nfc.info.antpos=16
-ro.vendor.nfc.support.ese=false
-
 # Perf
-sys.perf.hmp=6:2
-ro.vendor.perf-hal.ver=2.2
 ro.vendor.extension_library=libqti-perfd-client.so
-
-# Qualcomm System Daemon
-persist.vendor.qcomsysd.enabled=1
 
 # RIL
 ro.carrier=unknown
@@ -185,9 +157,6 @@ ro.telephony.default_network=33,22
 ro.vendor.use_data_netmgrd=false
 ro.radio.noril=no
 ro.vendor.epdg.support=true
-
-# Shutdown
-sys.vendor.shutdown.waittime=500
 
 # USB
 vendor.usb.diag.func.name=diag
