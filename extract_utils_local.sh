@@ -1631,13 +1631,13 @@ function prepare_images() {
 # extract:
 #
 # Positional parameters:
-# $1: file containing the list of items to extract (aka proprietary-files.txt)
+# $1: file containing the list of items to extract (aka proprietary-files_local.txt)
 # $2: path to extracted system folder, an ota zip file, or "adb" to extract from device
 # $3: section in list file to extract - optional. Setting section via $3 is deprecated.
 #
 # Non-positional parameters (coming after $2):
 # --section: preferred way of selecting the portion to parse and extract from
-#            proprietary-files.txt
+#            proprietary-files_local.txt
 # --kang: if present, this option will activate the printing of hashes for the
 #         extracted blobs. Useful with --section for subsequent pinning of
 #         blobs taken from other origins.
