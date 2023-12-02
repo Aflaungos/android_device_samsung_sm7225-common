@@ -20,7 +20,6 @@ vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.offload.multiple.enabled=false
 vendor.audio.offload.passthrough=false
 ro.vendor.audio.sdk.ssr=false
-ro.control_privapp_permissions=log
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.safx.pbe.enabled=false
 vendor.audio.parser.ip.buffer.size=262144
