@@ -391,15 +391,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.display.composer</name>
-        <version>2.0-1</version>
-        <version>3.0</version>
-        <interface>
-            <name>IQtiComposer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.demura</name>
         <version>1.0</version>
         <interface>
