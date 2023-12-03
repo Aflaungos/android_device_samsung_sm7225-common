@@ -105,7 +105,7 @@ on post-fs
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
+    #exec_start wait_for_keymaster
     mount_all --late
 
 # Logcat Services
