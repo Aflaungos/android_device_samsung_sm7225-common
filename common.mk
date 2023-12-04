@@ -409,7 +409,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.mock
+    android.hardware.thermal@2.0.vendor \
+    android.frameworks.cameraservice.service@2.1.vendor
 
 # VNDK
 PRODUCT_COPY_FILES += \
@@ -457,8 +458,9 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/samsung \
-    hardware/samsung/nfc \
     hardware/samsung/aidl/power-libperfmgr
 
 # Prop files
