@@ -1,6 +1,3 @@
-#Carrier
-type carrier_file, file_type;
-
 # SYSFS
 type sysfs_battery, sysfs_type, r_fs_type, fs_type;
 type sysfs_camera, sysfs_type, r_fs_type, fs_type;
@@ -15,6 +12,7 @@ type sysfs_sec_touchscreen, sysfs_type, r_fs_type, fs_type;
 type sysfs_sensors, sysfs_type, r_fs_type, fs_type;
 type sysfs_wifi, sysfs_type, r_fs_type, fs_type;
 
+type sysfs_audio_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_backlight_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_camera_writable, sysfs_type, r_fs_type, fs_type;
 type sysfs_battery_writable, sysfs_type, rw_fs_type, fs_type;

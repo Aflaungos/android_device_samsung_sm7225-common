@@ -3,6 +3,8 @@
 get_prop(rild, vendor_radio_prop)
 get_prop(rild, radio_prop)
 
+set_prop(rild, vendor_call_prop)
+
 allow rild block_device:dir search;
 allow rild mnt_vendor_file:dir { getattr search };
 
@@ -42,6 +44,20 @@ allow rild tun_device:chr_file rw_file_perms;
 allowxperm rild tun_device:chr_file ioctl { 0x54ca 0x54cb };
 allow rild self:tun_socket create;
 
-# /vendor/bin/hw/rild
-allow rild init:dir { search };
-allow rild init:file { read open getattr };
+dontaudit rild {
+    system_prop
+    default_prop
+}:file read;
+
+dontaudit rild default_prop:property_service set;
+dontaudit rild { default_prop system_prop }:file { map open getattr };
+
+# persist.vendor.data.shs_ko_load
+set_prop(rild, vendor_data_ko_prop);
+
+# persist.vendor.data.shsusr_load
+set_prop(rild, vendor_data_shsusr_prop);
+
+# Camera
+allow rild hal_camera_default:dir search;
+allow rild hal_camera_default:file { getattr open read };
