@@ -710,6 +710,15 @@ vendor/lib/libqseed3.so
 vendor/lib64/libqseed3.so
 vendor/etc/display/advanced_sf_offsets.xml
 
+# Health
+vendor/bin/hw/android.hardware.health@2.1-service-samsung
+vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
+-vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
+vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
+vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|c935bc7655132f6e91061149e92a3980294e864e
+vendor/lib/vendor.samsung.hardware.health@2.0.so
+vendor/lib64/vendor.samsung.hardware.health@2.0.so
+
 # Vulkan
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
@@ -1068,8 +1077,15 @@ vendor/lib64/libnanopb.so
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
+vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
+vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
+vendor/lib/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/libhypervintf.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so
 
 # Time services
 # -vendor/app/TimeService/TimeService.apk
