@@ -18,7 +18,6 @@ allow init ion_device:chr_file { read open ioctl };
 allow init {
     boot_block_device
     dtbo_block_device
-    vbmeta_block_device
 }:{ blk_file lnk_file } relabelto;
 
 # rild (00564E445F4D756C7469636C69656E74)
