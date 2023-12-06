@@ -50,6 +50,9 @@ type taas_efs_file, file_type;
 type wifi_efs_file, file_type;
 type gatekeeper_efs_file, file_type;
 
+#Carrier
+type carrier_file, file_type;
+
 # PROC
 type proc_last_kmsg, fs_type, proc_type;
 
