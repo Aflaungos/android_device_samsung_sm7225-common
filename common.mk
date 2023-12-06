@@ -219,8 +219,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service.samsung \
-    libkeymaster4_1support.vendor
+    android.hardware.keymaster@4.1.vendor:64
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
