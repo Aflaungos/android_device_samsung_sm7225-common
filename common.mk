@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     fstab.ramplus \
     init.qcom.rc \
     init.qti.media.rc \
+    init.qcom.usb.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
@@ -364,11 +365,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh
-
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
+    android.hardware.usb@1.3-service-qti
 
 # Vibrator
 PRODUCT_PACKAGES += \
