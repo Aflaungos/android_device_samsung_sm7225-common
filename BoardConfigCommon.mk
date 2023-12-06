@@ -18,7 +18,6 @@ COMMON_PATH := device/samsung/sm7225-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_DUP_SYSPROP := true
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -88,7 +87,6 @@ BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 BOARD_ROOT_EXTRA_FOLDERS += \
-    carrier \
     metadata \
     efs
 
