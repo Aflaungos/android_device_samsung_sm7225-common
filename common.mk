@@ -401,6 +401,7 @@ PRODUCT_PACKAGES += \
 
 # Fix ADB
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log \
     ro.secure=0 \
     ro.debuggable=1 \
     ro.adb.secure=0 \
