@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     fstab.ramplus \
     init.qcom.rc \
+    init.qcom.usb.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
