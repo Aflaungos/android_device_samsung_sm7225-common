@@ -161,6 +161,7 @@ ro.vendor.epdg.support=true
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
+ro.vendor.qti.soc_id=459
 
 # Wifi
 wifi.aware.interface=wifi-aware0
