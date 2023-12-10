@@ -153,13 +153,6 @@ vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib/libbthost_if.so
 vendor/lib64/libbthost_if.so
 
-# Bluetooth firmware
-vendor/firmware/apbtfw11.tlv
-vendor/firmware/crbtfw21.tlv
-vendor/firmware/crnv21.b71
-vendor/firmware/crnv21.bin
-vendor/firmware/apnv11.bin
-
 # Camera
 # vendor/lib/camera.device@1.0-impl.so
 # vendor/lib/camera.device@3.2-impl.so
@@ -245,7 +238,6 @@ vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
 # vendor/lib/camera/components/com.qti.stats.pdlib.so
 vendor/lib/camera/components/com.qti.stats.pdlibsony.so
 vendor/lib/camera/components/com.samsung.node.capture_bokeh.so
-vendor/lib/camera/components/com.qti.node.depth.so
 # vendor/lib/camera/components/com.qtistatic.stats.af.so
 # vendor/lib/camera/components/com.qti.stats.awb.so
 vendor/lib/camera/components/com.qti.node.dummyrtb.so
@@ -385,7 +377,6 @@ vendor/lib64/camera/components/com.samsung.node.capture_fusion.so
 vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so
 vendor/lib64/camera/components/com.qti.stats.pdlibsony.so
 vendor/lib64/camera/components/com.samsung.node.capture_bokeh.so
-vendor/lib64/camera/components/com.qti.node.depth.so
 # vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qti.node.dummyrtb.so
 vendor/lib64/camera/components/com.qti.node.stich.so
@@ -527,9 +518,6 @@ vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # DRM
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib/libcpion.so
 vendor/lib64/libcpion.so
 vendor/lib/libminksocket.so
@@ -561,9 +549,6 @@ system_root/system/system_ext/lib64/libfm-hci.so
 system_root/system/system_ext/lib/vendor.qti.hardware.fm@1.0.so
 system_root/system/system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Gatekeeper
-vendor/lib64/hw/gatekeeper.mdfpp.so
-
 # GPS
 # -vendor/app/CACertService/CACertService.apk
 vendor/lib/libjnihelper.so
@@ -571,7 +556,6 @@ vendor/lib64/libjnihelper.so
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/bin/loc_launcher
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/gps.conf
 vendor/etc/sap.conf
 vendor/etc/lowi.conf
@@ -643,8 +627,6 @@ vendor/lib/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
 # Graphics
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/bin/qdcmss
 vendor/bin/ppd
 vendor/etc/init/qdcmss.rc
@@ -709,15 +691,6 @@ vendor/lib64/libpvr.so
 vendor/lib/libqseed3.so
 vendor/lib64/libqseed3.so
 vendor/etc/display/advanced_sf_offsets.xml
-
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service-samsung
-vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
--vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|c935bc7655132f6e91061149e92a3980294e864e
-vendor/lib/vendor.samsung.hardware.health@2.0.so
-vendor/lib64/vendor.samsung.hardware.health@2.0.so
 
 # Vulkan
 vendor/lib/hw/vulkan.adreno.so
@@ -785,11 +758,7 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 
 # Neuralnetworks
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/bin/npu_launcher
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
 vendor/lib/libnpu.so
 vendor/lib64/libnpu.so
 vendor/lib/libhta_hexagon_runtime.so
@@ -856,8 +825,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 
 # Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libqti-perfd-client.so
@@ -1010,45 +977,6 @@ vendor/lib64/libnetfilter_conntrack.so
 vendor/bin/factory.ssc
 vendor/bin/sscrpcd
 vendor/etc/init/vendor.sensors.sscrpcd.rc
-vendor/etc/sensors/config/atoll_default_sensors.json
-vendor/etc/sensors/config/bitra_lsm6dsm_0.json
-# vendor/etc/sensors/config/atoll_qrd_stk31610_0.json
-vendor/etc/sensors/config/sns_amd.json
-vendor/etc/sensors/config/sns_amd_sw_disabled.json
-vendor/etc/sensors/config/sns_amd_sw_enabled.json
-vendor/etc/sensors/config/sns_aont.json
-vendor/etc/sensors/config/sns_basic_gestures.json
-vendor/etc/sensors/config/sns_bring_to_ear.json
-vendor/etc/sensors/config/sns_ccd.json
-vendor/etc/sensors/config/sns_ccd_v2_walk.json
-vendor/etc/sensors/config/sns_ccd_v3_1_walk.json
-vendor/etc/sensors/config/sns_ccd_v3_walk.json
-vendor/etc/sensors/config/sns_cm.json
-vendor/etc/sensors/config/sns_dae.json
-vendor/etc/sensors/config/sns_device_orient.json
-vendor/etc/sensors/config/sns_diag_filter.json
-vendor/etc/sensors/config/sns_distance_bound.json
-vendor/etc/sensors/config/sns_dpc.json
-vendor/etc/sensors/config/sns_facing.json
-vendor/etc/sensors/config/sns_fmv.json
-vendor/etc/sensors/config/sns_fmv_legacy.json
-vendor/etc/sensors/config/sns_geomag_rv.json
-vendor/etc/sensors/config/sns_gyro_cal.json
-vendor/etc/sensors/config/sns_heart_rate.json
-vendor/etc/sensors/config/sns_mag_cal.json
-vendor/etc/sensors/config/sns_mag_cal_legacy.json
-vendor/etc/sensors/config/sns_multishake.json
-vendor/etc/sensors/config/sns_pedometer.json
-vendor/etc/sensors/config/sns_rmd.json
-vendor/etc/sensors/config/sns_rotv.json
-vendor/etc/sensors/config/sns_smd.json
-vendor/etc/sensors/config/sns_tilt.json
-vendor/etc/sensors/config/sns_tilt_sw_disabled.json
-vendor/etc/sensors/config/sns_tilt_sw_enabled.json
-vendor/etc/sensors/config/sns_tilt_to_wake.json
-vendor/etc/sensors/config/sns_wrist_pedo.json
-vendor/etc/sensors/hals.conf
-vendor/etc/sensors/sns_reg_config
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsnsapi.so
@@ -1095,12 +1023,9 @@ vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
 
 # TrustZone
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/qseecomd.rc
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/etc/gpfspath_oem_config.xml
-vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libGPreqcancel.so
@@ -1117,8 +1042,6 @@ vendor/lib/libsecureui_svcsock.so
 vendor/lib/libSecureUILib.so
 vendor/lib/libssd.so
 vendor/lib/libStDrvInt.so
-vendor/lib/vendor.qti.hardware.qseecom@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
@@ -1135,7 +1058,6 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Wifi
 vendor/bin/cnss-daemon

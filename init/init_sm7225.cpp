@@ -58,11 +58,11 @@ void vendor_load_properties()
 
     name = device + "xx";
 
-    LOG(INFO) << "Found bootloader: " << bootloader;
-    LOG(INFO) << "Setting ro.product.model: " << model;
-    LOG(INFO) << "Setting ro.product.device: " << device;
-    LOG(INFO) << "Setting ro.product.name: " << name;
-    LOG(INFO) << "Setting ro.build.product: " << device;
+    LOG(INFO) << "Found bootloader: %s", bootloader.c_str();
+    LOG(INFO) << "Setting ro.product.model: %s", model.c_str();
+    LOG(INFO) << "Setting ro.product.device: %s", device.c_str();
+    LOG(INFO) << "Setting ro.product.name: %s", name.c_str();
+    LOG(INFO) << "Setting ro.build.product: %s", device.c_str();
 
     property_override_quad("ro.product.model", "ro.product.vendor.model", "ro.product.product.model", "ro.product.odm.model", model.c_str());
     property_override_quad("ro.product.device", "ro.product.vendor.device", "ro.product.product.device", "ro.product.odm.device", device.c_str());

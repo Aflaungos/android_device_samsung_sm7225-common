@@ -51,9 +51,7 @@ odm	/odm	f2fs	ro	wait,logical,first_stage_mount
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware-modem vfat    ro,shortname=lower,uid=0,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
 /dev/block/bootdevice/by-name/efs	/mnt/vendor/efs	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
 /dev/block/bootdevice/by-name/sec_efs	/efs	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
-/dev/block/bootdevice/by-name/carrier	/carrier	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	defaults,nofail,check
-/dev/block/bootdevice/by-name/spu	/spu	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,nofail,check
 
 # VOLD:samsung/common/fstab_dynamic_partition.samsung
-/devices/platform/soc/8804000.sdhci/mmc_host*        auto    auto    default    voldmanaged=sdcard:auto
+/devices/platform/soc/8804000.sdhci/mmc_host*        auto    auto    default    wait,voldmanaged=sdcard:auto,encryptable=userdata
 /devices/platform/soc/a600000.ssusb/a600000.dwc3*    auto    vfat    default    voldmanaged=usb:auto

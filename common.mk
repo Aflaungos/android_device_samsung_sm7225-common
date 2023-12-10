@@ -61,12 +61,10 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh \
     init.qti.chg_policy.sh
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default \
+    $(COMMON_PATH)/recovery/root/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default \
     $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
 # Audio
@@ -220,6 +218,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor:64
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7225
@@ -267,6 +269,9 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -317,7 +322,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.samsung-libperfmgr \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.3.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -328,7 +333,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+    $(COMMON_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_RECOVERY_ROOT_OUT)/init.recovery.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -427,16 +432,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-# Fix ADB
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=log \
-    ro.secure=0 \
-    ro.debuggable=1 \
-    ro.adb.secure=0 \
-    persist.sys.usb.config=mtp,adb \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
@@ -457,6 +452,11 @@ PRODUCT_SOONG_NAMESPACES += \
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/system.prop:$(TARGET_COPY_OUT_SYSTEM)/build.prop \
+    $(COMMON_PATH)/vendor.prop:$(TARGET_COPY_OUT_VENDOR)/build.prop \
+    $(COMMON_PATH)/odm.prop:$(TARGET_COPY_OUT_ODM)/etc/build.prop
 
 # Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/sm7225-common/sm7225-common-vendor.mk)

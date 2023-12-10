@@ -81,8 +81,9 @@ camera.disable_zsl_mode=1
 ro.camera.notify_nfc=1
 
 # Chipset
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM7225
+ro.vendor.qti.soc_id=459
 
 # Crypto
 ro.crypto.metadata_init_delete_all_keys.enabled=false
@@ -147,7 +148,6 @@ debug.stagefright.ccodec=1
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # RIL
-ro.carrier=unknown
 persist.vendor.radio.atfwd.start=true
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 ro.vendor.sec.radio.def_network=9
@@ -161,7 +161,13 @@ ro.vendor.epdg.support=true
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
-ro.vendor.qti.soc_id=459
+persist.sys.usb.config=mtp
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.qdss.inst.name=qdss_mdm
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=gsi
+vendor.usb.use_gadget_hal=0
 
 # Wifi
 wifi.aware.interface=wifi-aware0
