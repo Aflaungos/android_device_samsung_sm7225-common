@@ -55,7 +55,6 @@
     <hal format="hidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
         <transport>hwbinder</transport>
-        <version>2</version>
         <interface>
             <name>IBluetoothAudioProviderFactory</name>
             <instance>default</instance>
