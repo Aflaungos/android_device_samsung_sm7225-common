@@ -22,7 +22,7 @@
         manifest.xml
         manifest.xml
 -->
-<manifest version="2.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
         <transport>hwbinder</transport>
@@ -39,6 +39,13 @@
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.power</name>
+        <interface>
+            <name>IPower</name>
             <instance>default</instance>
         </interface>
     </hal>
