@@ -30,7 +30,13 @@
     </hal>
     <hal format="aidl">
         <name>vendor.lineage.health</name>
-        <fqname>IChargingControl/default</fqname>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IChargingControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IChargingControl/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.touch</name>
