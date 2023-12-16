@@ -3,3 +3,6 @@ ro.netflix.bsp_rev=Q7250-19133-1
 
 # RIL
 ro.vendor.qti.va_aosp.support=1
+
+# Network manager
+ro.telephony.iwlan_operation_mode=legacy

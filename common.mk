@@ -18,14 +18,14 @@ COMMON_PATH := device/samsung/sm7225-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+# APEX
+PRODUCT_COMPRESSED_APEX := false
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -36,6 +36,7 @@ AB_OTA_UPDATER := false
 # Init files and fstab
 PRODUCT_PACKAGES += \
     fstab.default \
+    fstab.default.ramdisk \
     fstab.ramplus \
     init.qcom.rc \
     init.qcom.usb.rc \
@@ -62,10 +63,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sh \
     init.qti.chg_policy.sh
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/root/fstab.default:$(TARGET_COPY_OUT_RAMDISK)/fstab.default \
-    $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -199,7 +196,10 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1.vendor
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -216,7 +216,12 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor:64
+    android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4_1support.vendor
+
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -424,6 +429,19 @@ PRODUCT_PACKAGES += \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Fix ADB
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.control_privapp_permissions=log
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
