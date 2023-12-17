@@ -63,8 +63,7 @@ TARGET_KERNEL_HEADER_ARCH   := arm64
 TARGET_LINUX_KERNEL_VERSION := 4.19
 
 # Kernel flags
-BOARD_KERNEL_CMDLINE += console=null androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += console=null androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket firmware_class.path=/vendor/firmware_mnt/image
 BOARD_BOOTIMG_HEADER_VERSION := 2
 
 BOARD_KERNEL_BASE            := 0x00000000
@@ -107,16 +106,16 @@ TARGET_USERIMAGES_USE_F2FS           := true
 TARGET_USERIMAGES_USE_EXT4           := true
 
 # Partition sizes, obtained with blockdev --getsize64
-BOARD_DTBOIMG_PARTITION_SIZE       := 10385096704
+BOARD_DTBOIMG_PARTITION_SIZE       := 0x0800000
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 100663296
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 81788928
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 85983232
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
 
 # Super partition sizes, obtained with fdisk -l /dev/block/dm-[0,1,2,3]
 BOARD_SUPER_PARTITION_SIZE                      := 9344909312
-BOARD_SUPER_PARTITION_GROUPS                    := samsung_dynamic_partitions
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE           := 10380902400 # BOARD_SUPER_PARTITION_SIZE-4MiB
+BOARD_SUPER_PARTITION_GROUPS                    := qti_dynamic_partitions
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE           := 9340715008 # BOARD_SUPER_PARTITION_SIZE-4MiB
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE       := 400000000
 BOARD_ODMIMAGE_PARTITION_RESERVED_SIZE     	:= 50000000
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE       := 3000000000
@@ -126,7 +125,7 @@ BOARD_VENDORIMAGE_EXTFS_INODE_COUNT             := -1
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT            := -1
 BOARD_ODMIMAGE_EXTFS_INODE_COUNT           	  := -1
 
-BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # Out dirs
 TARGET_COPY_OUT_VENDOR := vendor
