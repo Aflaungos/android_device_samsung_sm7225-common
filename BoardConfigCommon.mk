@@ -47,29 +47,34 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a76
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
 # 2nd Architecture
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a76
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/m23xq
 TARGET_KERNEL_ARCH          := arm64
 TARGET_KERNEL_HEADER_ARCH   := arm64
 TARGET_LINUX_KERNEL_VERSION := 4.19
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    LLVM=1 \
+    LLVM_IAS=1
 
 # Kernel flags
 BOARD_KERNEL_CMDLINE += console=null androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_BOOTIMG_HEADER_VERSION := 2
 
 BOARD_KERNEL_BASE            := 0x00000000
 BOARD_KERNEL_PAGESIZE        := 4096
 BOARD_RAMDISK_OFFSET         := 0x02000000
-BOARD_DTB_OFFSET             := 0x01f00000
 BOARD_KERNEL_OFFSET          := 0x00008000
 BOARD_KERNEL_TAGS_OFFSET     := 0x01e00000
 BOARD_KERNEL_IMAGE_NAME      := Image
@@ -80,7 +85,6 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --board $(BOARD_NAME)
@@ -106,16 +110,16 @@ TARGET_USERIMAGES_USE_F2FS           := true
 TARGET_USERIMAGES_USE_EXT4           := true
 
 # Partition sizes, obtained with blockdev --getsize64
-BOARD_DTBOIMG_PARTITION_SIZE       := 0x0800000
+BOARD_DTBOIMG_PARTITION_SIZE       := 8388608
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 100663296
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 85983232
-BOARD_CACHEIMAGE_PARTITION_SIZE    := 209715200
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 81788928
+BOARD_CACHEIMAGE_PARTITION_SIZE    := 629145600
 
 # Super partition sizes, obtained with fdisk -l /dev/block/dm-[0,1,2,3]
-BOARD_SUPER_PARTITION_SIZE                      := 9344909312
-BOARD_SUPER_PARTITION_GROUPS                    := qti_dynamic_partitions
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE           := 9340715008 # BOARD_SUPER_PARTITION_SIZE-4MiB
+BOARD_SUPER_PARTITION_SIZE                      := 10385096704
+BOARD_SUPER_PARTITION_GROUPS                    := samsung_dynamic_partitions
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE           := 9340715008 # BOARD_SUPER_PARTITION_SIZE-4MiB
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE       := 400000000
 BOARD_ODMIMAGE_PARTITION_RESERVED_SIZE     	:= 50000000
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE       := 3000000000
@@ -162,7 +166,9 @@ TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
 
 # HIDL manifests
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/configs/framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/compatibility_matrix.xml
 
 # QCOM
@@ -170,12 +176,6 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Samsung
 BOARD_VENDOR := samsung
-
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/batt_slate_mode
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -210,9 +210,9 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.default
 
 # SePolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+# BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+# SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+# SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Treble
 BOARD_VNDK_VERSION := current

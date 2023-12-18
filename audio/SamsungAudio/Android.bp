@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2023 The Android Open Source Project
+// Copyright (C) 2023 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,19 +12,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 
-cc_binary {
-    name: "audio_parameter_service.samsung_sm7225",
-    init_rc: ["audio_parameter_service.rc"],
+android_app {
+    name: "SamsungAudio",
+    srcs: ["src/**/*.java"],
+    certificate: "platform",
+    platform_apis: true,
     system_ext_specific: true,
-    srcs: [
-        "audio_parameter_service.cpp",
-    ],
-    shared_libs: [
-        "libbase",
-        "libutils",
-        "libhidlbase",
-        "liblog",
-        "android.hardware.audio@7.0",
-    ],
 }

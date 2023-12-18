@@ -4,6 +4,10 @@
     "target_path": "kernel/samsung/m23xq"
   },
   {
+        "repository": "android_hardware_samsung_nfc",
+        "target_path": "hardware/samsung/nfc"
+  },
+  {
         "repository": "android_hardware_samsung",
         "target_path": "hardware/samsung"
   }

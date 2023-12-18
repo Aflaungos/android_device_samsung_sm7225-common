@@ -68,4 +68,4 @@ extract "${MY_DIR}/proprietary-files_local.txt" "${SRC}" "${KANG}" --section "${
 # Fix proprietary blobs
 BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
 
-"${MY_DIR}/setup-makefiles.sh"
+"${MY_DIR}/setup-makefiles_local.sh"
