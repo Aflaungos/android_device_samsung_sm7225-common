@@ -79,8 +79,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    libvolumelistener \
-    SamsungAudio
+    libvolumelistener
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -143,22 +142,28 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.allocator-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
+    android.hardware.graphics.composer@2.1.vendor \
+    android.hardware.graphics.composer@2.2.vendor \
+    android.hardware.graphics.composer@2.3.vendor \
+    android.hardware.graphics.composer@2.4.vendor \
+    android.hardware.graphics.mapper@2.0.vendor \
+    android.hardware.graphics.mapper@2.1.vendor \
+    android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
     gralloc.default \
+    memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@2.0.vendor \
-    AdvancedDisplay
+    vendor.display.config@2.0.vendor
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -183,10 +188,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -207,22 +208,16 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor \
-    android.hidl.memory.block@1.0 \
-    android.hidl.memory.block@1.0.vendor
+    libhwbinder.vendor
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -230,11 +225,12 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor:64
+    android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4_1support.vendor
 
-# Keystore
+# Light
 PRODUCT_PACKAGES += \
-    android.system.keystore2
+    android.hardware.light-V1-ndk_platform.vendor:64
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -261,16 +257,16 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor
 
+# Network
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # OMX
 PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libstagefright_bufferpool@2.0.1.vendor \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -278,7 +274,9 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libstagefrighthw \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -332,7 +330,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
+    android.hardware.power-service-qti-sm7225 \
     android.hardware.power@1.2.vendor
 
 PRODUCT_COPY_FILES += \
@@ -341,6 +339,10 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl
 
 # Recovery
 PRODUCT_COPY_FILES += \
@@ -359,8 +361,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    sensors.samsung
+    android.hardware.sensors@2.0-ScopedWakelock.vendor
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -385,6 +386,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.sm7225
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
 # Tether
 PRODUCT_PACKAGES += \
     ipacm \
@@ -401,10 +406,11 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcrypto-v33.so
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     hostapd \
     libwifi-hal \
     libwifi-hal-qcom \
@@ -449,7 +455,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/samsung \
-    hardware/samsung/aidl/power-libperfmgr
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
