@@ -410,7 +410,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
     hostapd \
     libwifi-hal \
     libwifi-hal-qcom \
