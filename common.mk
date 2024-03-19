@@ -155,7 +155,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
-    gralloc.default \
+    gralloc.lito \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
@@ -409,6 +409,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd \
     libwifi-hal \
     libwifi-hal-qcom \
