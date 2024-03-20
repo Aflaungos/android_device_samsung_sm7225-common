@@ -6,6 +6,14 @@
         vendor.samsung.frameworks.codecsolution-matrix.xml
 -->
 <compatibility-matrix version="2.0" type="device">
+    <hal format="hidl" optional="true">
+        <name>android.hardware.configstore</name>
+        <version>1.1</version>
+        <interface>
+            <name>ISurfaceFlingerConfigs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="false">
         <name>android.frameworks.schedulerservice</name>
         <version>1.0</version>
