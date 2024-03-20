@@ -19,6 +19,14 @@
         </interface>
         <fqname>@1.0::IUsbRestrict/default</fqname>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.configstore</name>
+        <version>1.1</version>
+        <interface>
+            <name>ISurfaceFlingerConfigs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.net.nlinterceptor</name>
         <interface>
