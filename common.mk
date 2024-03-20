@@ -420,7 +420,8 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    android.hardware.tetheroffload.config@1.0
 
 # Fix ADB
 PRODUCT_SYSTEM_PROPERTIES += \
