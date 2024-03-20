@@ -24,7 +24,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.audio.effect</name>
-        <version>7.0</version>
+        <version>7.1</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
@@ -37,6 +37,10 @@
             <name>IAllocator</name>
             <instance>ashmem</instance>
         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.memtrack</name>
+        <fqname>IMemtrack/default</fqname>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.lineage.touch</name>
