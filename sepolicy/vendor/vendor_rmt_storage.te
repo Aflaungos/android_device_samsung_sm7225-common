@@ -1,1 +1,5 @@
 allow vendor_rmt_storage sysfs_npu:file { read open };
+
+allow vendor_rmt_storage sysfs:file { read open };
+
+allow vendor_rmt_storage block_device:blk_file { read write open };
