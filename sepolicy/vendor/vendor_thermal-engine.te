@@ -1,3 +1,5 @@
 allow vendor_thermal-engine sysfs_battery:dir search;
 
 get_prop(vendor_thermal-engine, vendor_mpctl_prop)
+
+allow vendor_thermal-engine sysfs:file { read open getattr };
