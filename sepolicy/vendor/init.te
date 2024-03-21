@@ -29,3 +29,12 @@ allow init hwservicemanager:binder { call };
 # /vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 allow init vendor_file:file { execute };
 
+allow init hal_lineage_fastcharge_hwservice:hwservice_manager { add find };
+
+allow init hwservicemanager:binder { call transfer };
+
+allow init hal_lineage_touch_hwservice:hwservice_manager { add };
+
+allow init same_process_hal_file:file { execute };
+
+allow init init_socket:qipcrtr_socket { create getattr write read setopt };
