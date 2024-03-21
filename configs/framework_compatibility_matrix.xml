@@ -19,6 +19,14 @@
         </interface>
         <fqname>@1.0::IUsbRestrict/default</fqname>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.health</name>
+        <version>2.1</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.net.nlinterceptor</name>
         <interface>
@@ -152,7 +160,7 @@
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>7.0-1</version>
+        <version>7.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>

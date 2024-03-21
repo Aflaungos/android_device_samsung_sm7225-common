@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/configs/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(COMMON_PATH)/audio/configs/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf\
     $(COMMON_PATH)/audio/configs/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(COMMON_PATH)/audio/configs/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
     $(COMMON_PATH)/audio/configs/audio_platform_info_lagoon_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(COMMON_PATH)/audio/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(COMMON_PATH)/audio/configs/mixer_paths_lagoonqrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_lagoonqrd.xml \
@@ -155,7 +156,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
-    gralloc.lito \
+    gralloc.default \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
