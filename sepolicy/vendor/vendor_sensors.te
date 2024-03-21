@@ -7,3 +7,7 @@ allow vendor_sensors {
     vendor_sysfs_sensors
     sysfs_sensors
 }:file { read open getattr };
+
+allow vendor_sensors sysfs:file { getattr };
+
+allow vendor_sensors vendor_sysfs_sensors:dir search;
