@@ -126,10 +126,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor
@@ -147,20 +143,12 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.4-service \
-    android.hardware.graphics.composer@2.1.vendor \
-    android.hardware.graphics.composer@2.2.vendor \
-    android.hardware.graphics.composer@2.3.vendor \
-    android.hardware.graphics.composer@2.4.vendor \
-    android.hardware.graphics.mapper@2.0.vendor \
-    android.hardware.graphics.mapper@2.1.vendor \
-    android.hardware.graphics.mapper@3.0.vendor \
+    init.qti.display_boot.sh \
     libsdmcore \
     libsdmutils \
     libtinyxml \
     libtinyxml2 \
     gralloc.lito \
-    gralloc.default \
     memtrack.lito \
     libqdMetaData \
     libqdMetaData.system \
@@ -168,11 +156,13 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.system.qti \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.11.vendor \
+    vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
 # Doze
