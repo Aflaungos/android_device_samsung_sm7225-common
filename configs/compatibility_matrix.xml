@@ -45,10 +45,6 @@
             <instance>ashmem</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.memtrack</name>
-        <fqname>IMemtrack/default</fqname>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.lineage.touch</name>
         <transport>hwbinder</transport>
