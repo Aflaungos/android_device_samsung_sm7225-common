@@ -152,7 +152,6 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libtinyxml2 \
-    hwcomposer.lito \
     gralloc.lito \
     memtrack.lito \
     libqdMetaData \
