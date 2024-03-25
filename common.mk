@@ -143,11 +143,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.1 \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0.vendor \
     android.hardware.graphics.mapper@2.1.vendor \
     android.hardware.graphics.mapper@3.0.vendor \
-    gralloc.default \
     libsdmcore \
     libsdmutils \
     libtinyxml \
@@ -165,8 +164,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@1.11 \
-    vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     AdvancedDisplay
