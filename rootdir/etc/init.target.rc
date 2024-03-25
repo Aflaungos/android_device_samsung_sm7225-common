@@ -108,6 +108,12 @@ on late-fs
     exec_start wait_for_keymaster
     mount_all --late
 
+service adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+
 # Logcat Services
 service boot_log /system/bin/logcat -b all -D -f /proc/boot_log_full.txt
     class main
