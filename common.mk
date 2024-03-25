@@ -143,7 +143,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0.vendor \
     android.hardware.graphics.mapper@2.1.vendor \
     android.hardware.graphics.mapper@3.0.vendor \
@@ -153,6 +152,7 @@ PRODUCT_PACKAGES += \
     libtinyxml2 \
     gralloc.lito \
     memtrack.lito \
+    hwcomposer.lito
     libqdMetaData \
     libqdMetaData.system \
     libdisplayconfig.qti \
@@ -459,8 +459,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/samsung \
-    hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/samsung/aidl/power-libperfmgr
 
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
