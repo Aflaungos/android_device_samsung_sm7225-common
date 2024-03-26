@@ -93,14 +93,10 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbthost_if \
-    libbthost_if.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.a2dp@1.0-impl \
-    android.hardware.bluetooth.a2dp@1.0-service
+    android.hardware.bluetooth@1.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -145,7 +141,6 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
-    hwcomposer.lito \
     gralloc.lito \
     memtrack.lito \
     libqdMetaData \
@@ -260,11 +255,6 @@ PRODUCT_PACKAGES += \
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
-
-# NFC
-PRODUCT_PACKAGES += \
-    nxp.android.hardware.nfc@1.2-service.samsung \
-    Tag
 
 # OMX
 PRODUCT_PACKAGES += \
