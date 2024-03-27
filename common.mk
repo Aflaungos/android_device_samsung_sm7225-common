@@ -132,7 +132,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
@@ -460,8 +460,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr
 
