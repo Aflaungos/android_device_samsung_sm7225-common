@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libtinyxml2 \
     gralloc.lito \
+    gralloc.default \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
