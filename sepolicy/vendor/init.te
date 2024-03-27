@@ -2,6 +2,8 @@
 
 allow init proc_last_kmsg:file { setattr };
 
+allow init proc:file { setattr };
+
 # /sys/kernel/tracing
 allow init debugfs_tracing_debug:dir { mounton };
 
