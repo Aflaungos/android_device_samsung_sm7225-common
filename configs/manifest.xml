@@ -59,6 +59,13 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.graphics.composer3</name>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.neuralnetworks</name>
         <transport>hwbinder</transport>
         <version>1.3</version>
