@@ -135,7 +135,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
-    android.hardware.graphics.composer3-service.lito \
+    android.hardware.graphics.composer3-service \
     vendor.qti.hardware.display.composer-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
@@ -461,8 +461,11 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel
     hardware/samsung \
-    hardware/samsung/aidl/power-libperfmgr
+    hardware/samsung/aidl/power-libperfmgr \
+    hardware/interfaces
 
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
