@@ -58,7 +58,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.graphics.composer3</name>
         <interface>
             <name>IComposer</name>
