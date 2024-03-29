@@ -166,9 +166,7 @@ TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
 
 # HIDL manifests
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(COMMON_PATH)/configs/framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/compatibility_matrix.xml
 
 # QCOM
@@ -181,10 +179,13 @@ BOARD_VENDOR := samsung
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Display
+TARGET_USES_COLOR_METADATA := true
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
+TARGET_USES_DRM_PP := true
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
-TARGET_DISABLED_UBWC := true
-BOARD_USES_ADRENO := true
 
 VENDOR_SECURITY_PATCH := 2023-09-01
 
