@@ -71,6 +71,15 @@
         <fqname>@2.0::IAdaptiveBacklight/default</fqname>
         <fqname>@2.0::ISunlightEnhancement/default</fqname>
     </hal>
+    <hal format="hidl" override="true">
+        <name>vendor.lineage.fastcharge</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFastCharge</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.composer</name>
         <version>3.0</version>
