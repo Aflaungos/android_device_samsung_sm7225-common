@@ -132,26 +132,25 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 # Display
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.graphics.composer@2.4-service \
-    vendor.qti.hardware.display.composer@3.0 \
+    vendor.qti.hardware.display.allocator-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    libgrallocutils \
     android.hardware.renderscript@1.0-impl \
+    android.hardware.graphics.composer@2.1.vendor \
+    android.hardware.graphics.composer@2.2.vendor \
+    android.hardware.graphics.composer@2.3.vendor \
+    android.hardware.graphics.composer@2.4.vendor \
+    android.hardware.graphics.mapper@2.0.vendor \
+    android.hardware.graphics.mapper@2.1.vendor \
+    android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
     gralloc.lito \
-    libsdmcore \
-    libsdmutils \
     memtrack.lito \
     libqdMetaData \
-    libqdMetaData.system \
     libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
