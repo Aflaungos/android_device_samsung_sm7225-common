@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libtinyxml2 \
     init.qti.display_boot.sh \
+    libdisplaydebug \
     gralloc.lito \
     memtrack.lito \
     libqdMetaData \
