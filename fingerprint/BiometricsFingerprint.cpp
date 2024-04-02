@@ -59,13 +59,6 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr) {
         LOG(ERROR) << "Can't open HAL module";
     }
 
-    set(TSP_CMD_PATH, "set_fod_rect,270,1400,450,1530");
-
-    std::ifstream in("/sys/class/fingerprint/fingerprint/position");
-    mIsUdfps = !!in;
-    if (in)
-        in.close();
-
 #ifdef HAS_FINGERPRINT_GESTURES
     request(FINGERPRINT_REQUEST_NAVIGATION_MODE_START, 1);
 
@@ -101,39 +94,12 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr) {
 
     LOG(INFO) << "Successfully registered uinput-sec-fp for fingerprint gestures";
 #endif
-
-    set(TSP_CMD_PATH, "fod_enable,1,1,0");
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
     if (ss_fingerprint_close() != 0) {
         LOG(ERROR) << "Can't close HAL module";
     }
-}
-
-Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
-    return mIsUdfps;
-}
-
-Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    property_set("vendor.finger.down", "1");
-
-    std::thread([this]() {
-        std::this_thread::sleep_for(std::chrono::milliseconds(35));
-        set(HBM_PATH, "331");
-    }).detach();
-
-    request(SEM_REQUEST_TOUCH_EVENT, FINGERPRINT_REQUEST_SESSION_OPEN);
-
-    return Void();
-}
-
-Return<void> BiometricsFingerprint::onFingerUp() {
-    request(SEM_REQUEST_TOUCH_EVENT, FINGERPRINT_REQUEST_RESUME);
-
-    set(HBM_PATH, "0");
-
-    return Void();
 }
 
 Return<RequestStatus> BiometricsFingerprint::ErrorFilter(int32_t error) {
