@@ -118,7 +118,7 @@ PRODUCT_PACKAGES += \
 
 # Configstore
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
+    disable_configstore
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -135,17 +135,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.composer@2.1.vendor \
-    android.hardware.graphics.composer@2.2.vendor \
-    android.hardware.graphics.composer@2.3.vendor \
-    android.hardware.graphics.composer@2.4.vendor \
-    android.hardware.graphics.mapper@2.0.vendor \
-    android.hardware.graphics.mapper@2.1.vendor \
-    android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
     gralloc.lito \
@@ -156,7 +149,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@2.0.vendor
+    vendor.display.config@1.11.vendor \
+    vendor.display.config@1.5 \
+    vendor.display.config@2.0
 
 # Doze
 PRODUCT_PACKAGES += \
