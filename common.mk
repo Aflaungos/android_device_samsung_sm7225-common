@@ -141,6 +141,7 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
+    init.qti.display_boot.sh \
     gralloc.lito \
     memtrack.lito \
     libqdMetaData \
@@ -450,7 +451,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr \
-    hardware/qcom/sm8250/display
+    hardware/qcom/sm7250/display
 
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
