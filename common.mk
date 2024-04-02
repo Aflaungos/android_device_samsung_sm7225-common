@@ -364,10 +364,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
-# Shims
-PRODUCT_PACKAGES += \
-    allocatorshim
-
 # Touch features
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.sm7225
