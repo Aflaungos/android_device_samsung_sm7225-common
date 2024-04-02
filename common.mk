@@ -450,7 +450,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr \
-    hardware/interfaces
+    hardware/qcom/sm8250/display
 
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
