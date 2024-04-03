@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh \
     libdisplaydebug \
     gralloc.lito \
-    gralloc.default \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
