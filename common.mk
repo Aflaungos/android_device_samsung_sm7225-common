@@ -226,6 +226,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light-V1-ndk_platform.vendor:64 \
     android.hardware.light-service.samsung
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7225
