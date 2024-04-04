@@ -483,6 +483,8 @@ vendor/etc/izat.conf
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
 vendor/lib/libgps.utils.so
 vendor/lib64/libgps.utils.so
+vendor/lib/libgnss.so
+vendor/lib64/libgnss.so
 vendor/lib/libgnsspps.so
 vendor/lib64/libgnsspps.so
 vendor/lib/vendor.qti.gnss@1.0.so
