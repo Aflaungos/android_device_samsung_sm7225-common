@@ -472,12 +472,15 @@ vendor/lib64/libjnihelper.so
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/bin/loc_launcher
+vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/gps.conf
+vendor/etc/gnss_antenna_info.conf
 vendor/etc/sap.conf
 vendor/etc/lowi.conf
 vendor/etc/flp.conf
 vendor/etc/izat.conf
+vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
 vendor/lib/libgps.utils.so
 vendor/lib64/libgps.utils.so
 vendor/lib/libgnsspps.so
@@ -542,6 +545,12 @@ vendor/lib/libcdfw.so
 vendor/lib64/libcdfw.so
 vendor/lib/vendor.qti.hardware.cacert@1.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
+vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
+vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
+vendor/lib/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 # Graphics
 -vendor/app/com.qualcomm.qti.gpudrivers.lito.api30/com.qualcomm.qti.gpudrivers.lito.api30.apk;PRESIGNED
