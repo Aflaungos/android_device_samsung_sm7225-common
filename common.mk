@@ -188,7 +188,6 @@ PRODUCT_COPY_FILES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-service-qti.vendor \
     android.hardware.gnss@2.1.vendor
 
 # Graphics
