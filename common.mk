@@ -188,9 +188,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-<<<<<<< Updated upstream
-    android.hardware.gnss@2.1.vendor
-=======
+    android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
     gnss@2.0-base.policy \
@@ -201,7 +199,6 @@ PRODUCT_PACKAGES += \
     libgeofencing \
     libgnss \
     libloc_socket
->>>>>>> Stashed changes
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
