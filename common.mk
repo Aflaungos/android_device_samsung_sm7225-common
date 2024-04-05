@@ -198,7 +198,6 @@ PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
-    libloc_socket
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
