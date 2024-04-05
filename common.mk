@@ -186,22 +186,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc
 
-# GPS
+# GNSS
 PRODUCT_PACKAGES += \
-<<<<<<< Updated upstream
     android.hardware.gnss@2.1.vendor
-=======
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti \
-    gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy \
-    gnss@2.0-xtwifi-client.policy \
-    gnss@2.0-xtwifi-inet-agent.policy \
-    libbatching \
-    libgeofencing \
-    libgnss \
-    libloc_socket
->>>>>>> Stashed changes
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
