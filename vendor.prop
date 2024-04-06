@@ -162,6 +162,9 @@ ro.security.keystore.keytype=sakv2,gak
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec=1
 
+# Network manager
+ro.telephony.iwlan_operation_mode=legacy
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
