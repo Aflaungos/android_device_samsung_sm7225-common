@@ -268,7 +268,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.samsung \
     android.hardware.nfc@1.0-impl \
-    libpn547_fw \
     com.android.nfc_extras \
     NfcNci \
     Tag
