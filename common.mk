@@ -272,6 +272,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service.samsung
+    android.hardware.nfc@1.0-impl \
+    libpn547_fw \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag
+
+PRODUCT_COPY_FILES += \
+    device/samsung/sm7225-common/configs/nfc/nfcee_access.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfcee_access.xml
+    device/samsung/sm7225-common/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    device/samsung/sm7225-common/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    vendor/samsung/sm7225-common/sm7225-common/proprietary/vendor/lib64/nfc_nci_nxpsn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci_nxpsn.so
+
+# NFC Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
+
 # OMX
 PRODUCT_PACKAGES += \
     libmm-omxcore \
