@@ -100,8 +100,15 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-legacy.sm7225 \
+    android.hardware.camera.provider@2.5-legacy.sm7225 \
     android.hardware.camera.provider@2.6-service.sm7225 \
     android.hardware.camera.provider@2.6.vendor \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl.sm7225 \
+    camera.device@3.3-impl.sm7225 \
+    camera.device@3.4-impl.sm7225 \
+    camera.device@3.5-impl.sm7225 \
     libgrallocusage.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     android.hardware.camera.device@3.6.vendor
