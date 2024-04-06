@@ -158,6 +158,9 @@ ro.hardware.gatekeeper=mdfpp
 ro.hardware.keystore=mdfpp
 ro.security.keystore.keytype=sakv2,gak
 
+# Logs
+persist.log.tag.OpenGLRenderer=S
+
 # Media
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec=1
