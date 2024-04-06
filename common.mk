@@ -365,6 +365,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     librilutils \
     librmnetctl \
+    libprotobuf-cpp-full \
     secril_config_svc
 
 # Sensors
