@@ -152,7 +152,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service
+    android.hardware.biometrics.fingerprint@2.1-service
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
