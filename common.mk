@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
     init.vendor.rilchip.rc \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
-    init.vendor.sysfw.rc
+    init.vendor.sysfw.rc \
+    vendor.samsung.rilchip.qcom.rc
 
 # Vendor scripts
 PRODUCT_PACKAGES += \
@@ -151,7 +152,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung
+    android.hardware.biometrics.fingerprint@2.3-service.samsung \
+    vendor.qti.hardware.fingerprint@1.0
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -268,7 +270,8 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.samsung \
-    com.android.nfc_extras \
+    libnfc-nci \
+    libnfc_nci_jni \
     NfcNci \
     Tag
 
@@ -358,7 +361,8 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -370,13 +374,12 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor:64 \
-    android.hardware.radio.config@1.2.vendor:64 \
-    android.hardware.radio.deprecated@1.0.vendor:64 \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
     libxml2 \
     librilutils \
     librmnetctl \
-    libprotobuf-cpp-full \
     secril_config_svc
 
 # Sensors

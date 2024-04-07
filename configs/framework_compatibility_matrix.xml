@@ -280,35 +280,21 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal override="true" format="hidl">
         <name>android.hardware.radio</name>
-        <version>1.0-5</version>
-        <interface>
-            <name>IRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-        <interface>
-            <name>ISap</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
+        <transport>hwbinder</transport>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
+        <fqname>@1.2::ISap/slot1</fqname>
+        <fqname>@1.2::ISap/slot2</fqname>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.radio</name>
-        <version>1.2</version>
-        <interface>
-            <name>ISap</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
+    <hal override="true" format="hidl">
         <name>android.hardware.radio.config</name>
-        <version>1.0-2</version>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
         <interface>
-            <name>IRadioConfig</name>
-            <instance>default</instance>
+           <name>IRadioConfig</name>
+           <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -998,16 +984,18 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio</name>
-        <version>2.2</version>
-        <interface>
-            <name>ISehRadio</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
+       <name>vendor.samsung.hardware.radio</name>
+       <transport>hwbinder</transport>
+       <version>2.2</version>
+       <interface>
+           <name>ISehRadio</name>
+           <instance>slot1</instance>
+           <instance>slot2</instance>
+       </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.radio.bridge</name>
+        <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
             <name>ISehBridge</name>
@@ -1017,13 +1005,14 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.radio.channel</name>
+        <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
             <name>ISehChannel</name>
-            <instance>epdgd</instance>
-            <instance>epdgd2</instance>
             <instance>imsd</instance>
             <instance>imsd2</instance>
+            <instance>epdgd</instance>
+            <instance>epdgd2</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">

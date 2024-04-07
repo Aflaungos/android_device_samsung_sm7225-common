@@ -80,7 +80,7 @@ vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libdrc.so
 vendor/lib/libspkrprot.so
 
-# Soundtrigger
+# Audio (Soundtrigger)
 vendor/lib/hw/sound_trigger.primary.lito.so
 vendor/lib64/hw/sound_trigger.primary.lito.so
 vendor/lib/libaudio_soundtrigger.so
@@ -95,7 +95,7 @@ vendor/lib64/libgcs-calwrapper.so
 vendor/lib/libmulawdec.so
 vendor/lib64/libmulawdec.so
 
-# Audio modules
+# Audio (modules)
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcreverb.so
@@ -107,7 +107,7 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libqcbassboost.so
 
-# Audio Firmware
+# Audio (Firmware)
 vendor/firmware/dax_param.bin
 vendor/firmware/tfa98xx.cnt
 
@@ -143,7 +143,7 @@ vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib/libbthost_if.so
 vendor/lib64/libbthost_if.so
 
-# Bluetooth firmware
+# Bluetooth (Firmware)
 vendor/firmware/apbtfw11.tlv
 vendor/firmware/crbtfw21.tlv
 vendor/firmware/apnv11.b71
@@ -385,6 +385,7 @@ vendor/lib64/libqcwrappercommon.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib64/libcamxfdalgo.so
+vendor/lib64/libofflinelog.so
 
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -453,6 +454,15 @@ vendor/lib/libfloatingfeature.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
+
+# Fingerprint
+vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
+vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
+vendor/lib/hw/fingerprint_default.so
+vendor/lib64/hw/fingerprint_default.so
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
 
 # FM
 vendor/lib/vendor.qti.hardware.fm@1.0.so
@@ -906,6 +916,7 @@ vendor/etc/mtu-conf.xml
 vendor/etc/sec_config_oem
 vendor/etc/pdpcnt-conf.xml
 vendor/lib64/libril_sem.so
+vendor/lib64/librilutils.so
 vendor/lib/libconfigdb.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libengmode_client.so
