@@ -29,6 +29,7 @@ cc_library_shared {
         "loc_nmea.cpp",
         "LocIpc.cpp",
         "LogBuffer.cpp",
+        "sec_gps.c",
     ],
 
     cflags: [
