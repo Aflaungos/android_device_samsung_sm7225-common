@@ -156,8 +156,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung \
-    vendor.qti.hardware.fingerprint@1.0
+    android.hardware.biometrics.fingerprint@2.3-service.samsung
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -366,7 +365,7 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+    libprotobuf-cpp-full
 
 # Radio
 PRODUCT_PACKAGES += \
