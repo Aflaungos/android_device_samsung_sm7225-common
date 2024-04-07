@@ -196,7 +196,7 @@ PRODUCT_PACKAGES += \
     gnss@2.0-xtwifi-inet-agent.policy \
     libbatching \
     libgeofencing \
-    libgnss \
+    libgnss
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
