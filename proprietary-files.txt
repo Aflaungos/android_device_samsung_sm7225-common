@@ -368,6 +368,8 @@ vendor/lib64/libDLInterface.camera.samsung.so
 vendor/lib64/libcamxstatscore.so
 vendor/lib64/libexifa.camera.samsung.so
 vendor/lib64/libcamxfdengine.so
+vendor/lib/libcamximageformatutils.so
+vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libjpegencoder_sw.unifunc.so
 vendor/lib64/hw/camera.unihal.default.so
