@@ -62,13 +62,13 @@ void Screenstate() {
             if (cmdFile.is_open()) {
                 cmdFile << "check_connection";
                 std::cout << "Message 'check_connection' written to /sys/class/sec/tsp/cmd" << std::endl;
-
+		std::this_thread::sleep_for(std::chrono::milliseconds(200)); // Sleep for 1000 milliseconds (1 second)
                 // Write "echo 1,0" to /sys/class/sec/tsp/enabled
                 std::ofstream enableFile("/sys/class/sec/tsp/enabled");
                 if (enableFile.is_open()) {
                     enableFile << "1,0";
                     std::cout << "Message '1,0' written to /sys/class/sec/tsp/enabled" << std::endl;
-
+                    std::this_thread::sleep_for(std::chrono::milliseconds(200)); // Sleep for 1000 milliseconds (1 second)
                     // Delay if needed before writing the next message
                     // ...
 
@@ -86,7 +86,7 @@ void Screenstate() {
         }
 
         // Sleep for a short duration before checking again
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(800));
     }
 }
 
