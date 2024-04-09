@@ -452,6 +452,8 @@ vendor/lib/mediadrm/libwvdrmengine.so
 # Feature
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libsemdataprops.so
+vendor/lib64/libsemtelephonyprops.so
 vendor/lib/libfloatingfeature.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib/libsecnativefeature.so
@@ -493,6 +495,8 @@ vendor/etc/lowi.conf
 vendor/etc/flp.conf
 vendor/etc/izat.conf
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc
+vendor/etc/xtra_root_cert.pem
+vendor/etc/xtwifi.conf
 vendor/lib/libgps.utils.so
 vendor/lib64/libgps.utils.so
 vendor/lib/libgnss.so
@@ -747,6 +751,12 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/libhta.so
 
 # NFC
+vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
+vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
+vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
+vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
+vendor/lib64/nfc_nci_nxpsn.so
+vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
 vendor/firmware/nfc/libpn557_fw.so
 
@@ -894,6 +904,12 @@ vendor/etc/init/init.qti.qcv.rc
 # RIL
 vendor/bin/hw/rild
 vendor/bin/adpl
+vendor/bin/emservice
+vendor/etc/init/emservice.rc
+vendor/bin/pm_proxy_helper
+vendor/etc/init/pm_proxy_helper.rc
+vendor/bin/ssgtzd
+vendor/etc/init/ssgtzd.rc
 vendor/bin/netmgrd
 vendor/bin/ipacm-diag
 vendor/bin/tftp_server
@@ -921,7 +937,10 @@ vendor/lib64/libril_sem.so
 vendor/lib64/librilutils.so
 vendor/lib/libconfigdb.so
 vendor/lib64/libconfigdb.so
+vendor/lib64/libengmode15.so
+vendor/lib64/libengmode2lite.so
 vendor/lib64/libengmode_client.so
+vendor/lib64/libengmode_tlc.so
 vendor/lib/libnetmgr.so
 vendor/lib/libnetmgr_common.so
 vendor/lib64/libnlnetmgr.so
@@ -1039,6 +1058,8 @@ vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/etc/ssg/ta_config.json
+vendor/etc/ssg/tz_whitelist.json
 vendor/etc/gpfspath_oem_config.xml
 vendor/lib/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib/libdrmfs.so
@@ -1082,6 +1103,9 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+
+# Vaultkeeper
+vendor/lib64/libstork_shared.so
 
 # Wifi
 vendor/bin/cnss-daemon
