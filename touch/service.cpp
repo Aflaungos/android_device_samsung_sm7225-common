@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 The LineageOS Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@
 
 #include "GloveMode.h"
 #include "TouchscreenGesture.h"
-#include "Sysinput.h"
 
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
@@ -32,12 +31,10 @@ using android::OK;
 
 using ::vendor::lineage::touch::V1_0::samsung::GloveMode;
 using ::vendor::lineage::touch::V1_0::samsung::TouchscreenGesture;
-using ::vendor::lineage::touch::V1_0::samsung::Sysinput;
 
 int main() {
     sp<GloveMode> gloveMode;
     sp<TouchscreenGesture> touchscreenGesture;
-    sp<Sysinput> Sysinput;
     status_t status;
 
     LOG(INFO) << "Touch HAL service is starting.";
@@ -51,12 +48,6 @@ int main() {
     touchscreenGesture = new TouchscreenGesture();
     if (touchscreenGesture == nullptr) {
         LOG(ERROR) << "Can not create an instance of Touch HAL TouchscreenGesture Iface, exiting.";
-        goto shutdown;
-    }
-
-    Sysinput = new Sysinput();
-    if (Sysinput == nullptr) {
-        LOG(ERROR) << "Can not create an instance of Touch HAL Sysinput Iface, exiting.";
         goto shutdown;
     }
 
@@ -75,15 +66,6 @@ int main() {
         status = touchscreenGesture->registerAsService();
         if (status != OK) {
             LOG(ERROR) << "Could not register service for Touch HAL TouchscreenGesture Iface ("
-                       << status << ")";
-            goto shutdown;
-        }
-    }
-
-    if (Sysinput->isSupported()) {
-        status = Sysinput->registerAsService();
-        if (status != OK) {
-            LOG(ERROR) << "Could not register service for Touch HAL Sysinput Iface ("
                        << status << ")";
             goto shutdown;
         }
