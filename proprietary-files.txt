@@ -388,7 +388,8 @@ vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib64/libcamxfdalgo.so
 vendor/lib64/libofflinelog.so
-
+vendor/lib/libbitmlengine.so
+vendor/lib64/libbitmlengine.so
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/multical.bin
