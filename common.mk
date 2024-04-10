@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
+    libgrallocusage.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     android.hardware.camera.device@3.6.vendor \
     android.hardware.camera.provider@2.6.vendor
