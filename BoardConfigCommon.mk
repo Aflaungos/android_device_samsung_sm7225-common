@@ -171,7 +171,9 @@ TARGET_SEC_FP_REQUEST_TOUCH_EVENT := true
 # HIDL manifests
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/framework_compatibility_matrix.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := \
+    $(COMMON_PATH)/configs/compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -195,10 +197,6 @@ VENDOR_SECURITY_PATCH := 2023-09-01
 # FM
 BOARD_HAS_QCA_FM_SOC := cherokee
 BOARD_HAVE_QCOM_FM := true
-
-# GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-LOC_HIDL_VERSION := 4.0
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
