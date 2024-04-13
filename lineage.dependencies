@@ -1,11 +1,7 @@
 [
   {
-    "repository": "android_kernel_samsung_m23xq_common",
+    "repository": "android_kernel_samsung_sm7225",
     "target_path": "kernel/samsung/m23xq"
-  },
-  {
-        "repository": "android_hardware_samsung_nfc",
-        "target_path": "hardware/samsung/nfc"
   },
   {
         "repository": "android_hardware_samsung",
