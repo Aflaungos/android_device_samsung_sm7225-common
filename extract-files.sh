@@ -57,6 +57,9 @@ function blob_fixup() {
         vendor/lib64/libsec-ril.so)
             sed -i 's/ril.dds.call.ongoing/vendor.calls.ongoing/g' "${2}"
             ;;
+        vendor/lib64/libsec-ril-dsds.so)
+            sed -i 's/ril.dds.call.slotid/vendor.calls.slotid/g' "${2}"
+            ;;
     esac
 }
 
