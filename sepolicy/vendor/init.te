@@ -39,8 +39,6 @@ allow init hal_lineage_touch_hwservice:hwservice_manager { add };
 
 allow init same_process_hal_file:file { execute };
 
-allow init init_socket:qipcrtr_socket { create getattr write read setopt };
-
 allow init sysfs:file { open read write };
 
 allow init hal_fingerprint_hwservice:hwservice_manager { find };
