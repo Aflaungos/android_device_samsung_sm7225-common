@@ -179,10 +179,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/compatibility_matrix.xml
 
-# QCOM
+# Qcom Hardware
 BOARD_USES_QCOM_HARDWARE := true
 
-# Samsung
+# Board Vendor
 BOARD_VENDOR := samsung
 
 # DRM
@@ -194,13 +194,15 @@ TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
 
 VENDOR_SECURITY_PATCH := 2023-09-01
 
 # FM
 BOARD_HAS_QCA_FM_SOC := cherokee
 BOARD_HAVE_QCOM_FM := true
+
+# Media
+TARGET_USES_ION := true
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
