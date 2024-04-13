@@ -390,6 +390,8 @@ vendor/lib64/libcamxfdalgo.so
 vendor/lib64/libofflinelog.so
 vendor/lib/libbitmlengine.so
 vendor/lib64/libbitmlengine.so
+vendor/lib/libcamxfacialfeatures.so
+vendor/lib64/libcamxfacialfeatures.so
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/multical.bin
