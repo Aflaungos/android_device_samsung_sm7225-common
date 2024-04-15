@@ -106,8 +106,7 @@ PRODUCT_PACKAGES += \
     libgrallocusage.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor \
-    android.frameworks.sensorservice@1.0.vendor
+    android.hardware.camera.provider@2.6.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
@@ -222,8 +221,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk_platform.vendor:64 \
-    android.hardware.light-service.samsung
+    android.hardware.light-V1-ndk_platform.vendor:64
 
 # Lineage Health
 PRODUCT_PACKAGES += \
