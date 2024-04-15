@@ -223,7 +223,8 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk_platform.vendor:64
+    android.hardware.light-V1-ndk_platform.vendor:64 \
+    android.hardware.light-service.samsung
 
 # Lineage Health
 PRODUCT_PACKAGES += \
