@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(COMMON_PATH)/audio/configs/,$(TARGET_COPY_OUT_VENDOR)/etc)
-    
+
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.6-service.sm7225 \
     android.hardware.camera.provider@2.4-impl \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \

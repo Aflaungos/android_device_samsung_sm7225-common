@@ -153,6 +153,8 @@ vendor/firmware/crnv21.bin
 
 
 # Camera
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
+vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
