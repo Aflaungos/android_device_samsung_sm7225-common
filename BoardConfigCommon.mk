@@ -184,6 +184,13 @@ BOARD_USES_QCOM_HARDWARE := true
 # Board Vendor
 BOARD_VENDOR := samsung
 
+# Camera
+SOONG_CONFIG_NAMESPACES += samsung_sm7225CameraVars
+SOONG_CONFIG_samsung_sm7225CameraVars += \
+    samsung_sm7225_model
+
+SOONG_CONFIG_samsung_sm7225CameraVars_samsung_sm7225_model := $(TARGET_DEVICE)
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
