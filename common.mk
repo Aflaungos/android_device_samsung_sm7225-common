@@ -149,6 +149,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.display.config@1.11.vendor \
     vendor.display.config@1.5 \
+    vendor.display.config@1.9 \
+    vendor.display.config@1.9.vendor \
     vendor.display.config@2.0
 
 # Doze
