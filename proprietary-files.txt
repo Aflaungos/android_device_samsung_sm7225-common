@@ -42,6 +42,10 @@ vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib64/libsnpe_dsp_domains_v2.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libsnpe_wrapper.so
+vendor/lib/libchilog.so
+vendor/lib64/libchilog.so
+vendor/lib/libsec2qc_conversion.so
+vendor/lib64/libsec2qc_conversion.so
 
 # Audio
 vendor/lib/btaudio_offload_if.so
@@ -153,8 +157,20 @@ vendor/firmware/crnv21.bin
 
 
 # Camera
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib64/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc2.so
+vendor/lib64/libmmcamera_faceproc2.so
+vendor/lib/libtriplecam_image_optical_zoom.so
+vendor/lib64/libtriplecam_image_optical_zoom.so
+vendor/lib/libtriplecam_optical_zoom_control.so
+vendor/lib64/libtriplecam_optical_zoom_control.so
+vendor/lib/libtriplecam_video_optical_zoom.so
+vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
+vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
@@ -198,6 +214,7 @@ vendor/lib/libscveCommon_stub.so
 vendor/lib/libqcwrappercommon.so
 vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libsocial_image_enhancement.uniplugin@1.0.so
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/libcamxfdalgo.so
 vendor/lib/camera/com.samsung.sensormodule.0_lsi_s5kjn1.bin
 vendor/lib/camera/com.samsung.sensormodule.13_sony_imx355_front_full.bin
@@ -245,6 +262,8 @@ vendor/lib/libhypermotion_core.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libvideobeauty_interface.so
 vendor/lib/libpadm.so
+vendor/lib/hw/com.qti.chi.override.so
+vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib/libfocuspeaking_interface.so
 vendor/lib/libimage_enhancement.arcsoft.so
 vendor/lib/libvideobeauty.uniplugin@1.0.so
@@ -387,6 +406,7 @@ vendor/lib64/libqcwrappercommon.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib64/libcamxfdalgo.so
+vendor/lib/libofflinelog.so
 vendor/lib64/libofflinelog.so
 vendor/lib/libbitmlengine.so
 vendor/lib64/libbitmlengine.so
@@ -470,6 +490,14 @@ vendor/lib64/hw/fingerprint_default.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib/libsynafpsensortwd.so
+vendor/lib64/libsynafpsensortwd.so
+vendor/lib/libbauthtzcommon.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib/libbauthserver.so
+vendor/lib64/libbauthserver.so
 
 # FM
 vendor/lib/vendor.qti.hardware.fm@1.0.so
@@ -483,13 +511,13 @@ system_ext/lib64/fm_helium.so
 vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # GPS
+vendor/etc/cacert_location.pem
 -vendor/app/CACertService/CACertService.apk
 vendor/lib/libjnihelper.so
 vendor/lib64/libjnihelper.so
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/bin/loc_launcher
-vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/gps.conf
 vendor/etc/gnss_antenna_info.conf
@@ -572,6 +600,9 @@ vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+
+# GPS (from sm7325-common)
+vendor/bin/hw/android.hardware.gnss@2.1-service-qti|e9824db34d8fa8479724c14352d0f6a13ee78e26
 
 # Graphics
 -vendor/app/com.qualcomm.qti.gpudrivers.lito.api30/com.qualcomm.qti.gpudrivers.lito.api30.apk;PRESIGNED
