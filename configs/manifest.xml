@@ -52,16 +52,6 @@
         </interface>
         <fqname>@3.0::ISehBiometricsFingerprint/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.biometrics.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>IBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.1::IBiometricsFingerprint/default</fqname>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.nfc</name>
         <transport>hwbinder</transport>
