@@ -1276,23 +1276,10 @@ EOF
 # Returns success if file can be pulled from the device or found locally
 #
 function get_file() {
-    local SRC="$3"
-
-    if [ "$SRC" = "adb" ]; then
-        # try to pull
-        adb pull "$1"           "$2" >/dev/null 2>&1 && return 0
-        adb pull "${1#/system}" "$2" >/dev/null 2>&1 && return 0
-        adb pull "system/$1"    "$2" >/dev/null 2>&1 && return 0
-
-        return 1
-    else
-        # try to copy
-        cp -r "$SRC/$1"           "$2" 2>/dev/null && return 0
-        cp -r "$SRC/${1#/system}" "$2" 2>/dev/null && return 0
-        cp -r "$SRC/system/$1"    "$2" 2>/dev/null && return 0
-
-        return 1
-    fi
+	local SRC="$(pwd)"
+    cp -r "$SRC/$1"           "$2" 2>/dev/null && return 0
+    cp -r "$SRC/${1#/system}" "$2" 2>/dev/null && return 0
+    cp -r "$SRC/system/$1"    "$2" 2>/dev/null && return 0
 };
 
 #

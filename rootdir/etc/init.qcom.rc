@@ -77,18 +77,14 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
-    # Charger
-    chown system system /sys/class/power_supply/battery/batt_slate_mode
-
     # Send Touchscreen fix commands
     write /sys/class/sec/tsp/cmd aot_enable,1
     write /sys/class/sec/tsp/cmd check_connection
     write /sys/class/sec/tsp/enabled 1,0
     write /sys/class/sec/tsp/enabled 2,1
 
-on fs
-    chmod 0660 /sys/class/camera/flash/rear_flash
-    chown camera camera /sys/class/camera/flash/rear_flash
+on post-fs
+    chmod 0755 /sys/kernel/debug/tracing
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -100,6 +96,7 @@ on early-boot
     write /sys/devices/virtual/cvp/cvp/boot 1
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
+    setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 
     # for backward compatibility
     chown system system /persist/sensors
@@ -406,7 +403,7 @@ on post-fs-data
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
     chmod 0660 /data/vendor/radio/copy_complete
-    
+
     # copy prebuilt qcril.db files always
     copy /vendor/radio/qcril_database/qcril.db /data/vendor/radio/qcril_prebuilt.db
     chown radio radio /data/vendor/radio/qcril_prebuilt.db
@@ -975,13 +972,6 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
-
-on property:vendor.post_boot.parsed=1
-    # Setup permission for powerHAL
-    chown system system /dev/stune/top-app/schedtune.boost
-    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
-    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
-    chown system system /sys/class/devfreq/soc:qcom,gpubw/min_freq
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override

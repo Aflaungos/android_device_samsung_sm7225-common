@@ -108,42 +108,8 @@ on late-fs
     exec_start wait_for_keymaster
     mount_all --late
 
-service adsprpcd /vendor/bin/adsprpcd
-   class main
-   user media
-   group media
-   disabled
-
-# Logcat Services
-service boot_log /system/bin/logcat -b all -D -f /proc/boot_log_full.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-service boot_log_crash /system/bin/logcat -b crash -D -f /proc/boot_log_crash.txt
-    class main 
-    user root
-    group root system
-    disabled
-    oneshot
-
-service boot_log_kernel /system/bin/logcat -b kernel -D -f /proc/boot_log_kernel.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
-    rm /proc/boot_log_full.txt
-    rm /proc/boot_log_crash.txt
-    rm /proc/boot_log_kernel.txt
-    start boot_log
-    start boot_log_crash
-    start boot_log_kernel
 
 on early-boot
     start vendor.sensors
@@ -153,10 +119,9 @@ on boot
 
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground-boost/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/restricted/cpus 1-3
-    write /dev/cpuset/background/cpus 1-3
-    write /dev/cpuset/system-background/cpus 1-3
+    write /dev/cpuset/foreground/cpus 0-4,6-7
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
@@ -249,12 +214,3 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
-
-on property:sys.boot_completed=1
-# Stop the logger service
-    stop boot_log
-    stop boot_log_crash
-    stop boot_log_kernel
-
-on property:persist.vendor.radio.port_index=""
-    setprop sys.usb.config adb
