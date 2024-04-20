@@ -166,7 +166,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.samsung
+   android.hardware.biometrics.fingerprint@2.1 \
+   android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
