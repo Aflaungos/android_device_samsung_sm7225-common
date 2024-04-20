@@ -652,6 +652,17 @@ vendor/lib/libsdm-diag.so
 vendor/lib/libtinyxml2_1.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libsdedrm.so
+vendor/lib64/libtinyxml2_1.so
+vendor/lib/libdisplayskuutils.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib/libdisp-aba.so
+vendor/lib64/libdisp-aba.so
+vendor/lib/libdpps.so
+vendor/lib64/libdpps.so
+vendor/lib/libpvr.so
+vendor/lib64/libpvr.so
+vendor/lib/libqseed3.so
+vendor/lib64/libqseed3.so
 
 # From Fairphone 4 - FP4.TP1V.C.073.20230905
 vendor/lib/libadreno_utils.so|308eadb89ac484506b29e079e6640a179b641168
@@ -692,20 +703,6 @@ vendor/lib/egl/libGLESv1_CM_adreno.so|64b58204e029c848e35f50ad163952db497ea90f
 vendor/lib64/egl/libGLESv1_CM_adreno.so|d22773a61614ac71cf68d874db66bbe7739761ce
 vendor/lib/egl/libGLESv2_adreno.so|8d19314b04aa08630c37e75c84fffa8ae6c13056
 vendor/lib64/egl/libGLESv2_adreno.so|66cbfdf913b77c43b21a82a016ab4a3bb2c8ea66
-
-vendor/lib64/libtinyxml2_1.so
-vendor/lib/libdisplayskuutils.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib/libOpenCL_Adreno.so
-vendor/lib64/libOpenCL_Adreno.so
-vendor/lib/libdisp-aba.so
-vendor/lib64/libdisp-aba.so
-vendor/lib/libdpps.so
-vendor/lib64/libdpps.so
-vendor/lib/libpvr.so
-vendor/lib64/libpvr.so
-vendor/lib/libqseed3.so
-vendor/lib64/libqseed3.so
 
 # Graphics firmware
 vendor/firmware/a619_gmu.bin
