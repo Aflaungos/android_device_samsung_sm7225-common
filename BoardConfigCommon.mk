@@ -178,7 +178,7 @@ TARGET_SEC_FP_REQUEST_TOUCH_EVENT := true
 # HIDL manifests
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/framework_compatibility_matrix.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/configs/compatibility_matrix.xml
 
 # Qcom Hardware
 BOARD_USES_QCOM_HARDWARE := true
