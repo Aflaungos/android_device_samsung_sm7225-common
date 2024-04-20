@@ -152,6 +152,10 @@ ro.surface_flinger.enable_frame_rate_override=false
 # Drm
 drm.service.enabled=true
 
+# Fingerprint
+ro.vendor.fingerprint.type=side
+ro.vendor.fingerprint.sensor_location=1080|940|130
+
 # Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 

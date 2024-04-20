@@ -156,11 +156,9 @@ BOARD_USES_ALSA_AUDIO := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
 
 # Camera
-SOONG_CONFIG_NAMESPACES += samsung_sm7225CameraVars
-SOONG_CONFIG_samsung_sm7225CameraVars += \
-    samsung_sm7225_model
-
-SOONG_CONFIG_samsung_sm7225CameraVars_samsung_sm7225_model := $(TARGET_DEVICE)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += needs_sec_reserved_field
+SOONG_CONFIG_samsungCameraVars_needs_sec_reserved_field := true
 
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
