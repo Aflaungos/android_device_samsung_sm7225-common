@@ -77,6 +77,9 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    # Charger
+    chown system system /sys/class/power_supply/battery/batt_slate_mode
+
     # Send Touchscreen fix commands
     write /sys/class/sec/tsp/cmd aot_enable,1
     write /sys/class/sec/tsp/cmd check_connection
