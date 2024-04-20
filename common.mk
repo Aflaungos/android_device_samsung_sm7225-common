@@ -105,9 +105,18 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64.samsung \
+    android.hardware.camera.provider@2.6-service.sm7225 \
+    android.hardware.camera.provider@2.4-legacy \
+    android.hardware.camera.provider@2.5-legacy \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl \
+    camera.device@3.3-impl \
+    camera.device@3.4-impl \
+    camera.device@3.5-impl \
     libgrallocusage.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.6.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
@@ -157,10 +166,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.samsung \
-    android.hardware.biometrics.fingerprint-V4-ndk \
-    android.hardware.biometrics.common-V4-ndk \
-    android.hardware.biometrics.common.util
+    android.hardware.biometrics.fingerprint-service.samsung
 
 # Fastbootd
 PRODUCT_PACKAGES += \
