@@ -220,6 +220,7 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
+    android.hardware.keymaster-V3-ndk.vendor \
     libkeymaster4_1support.vendor
 
 # Light
