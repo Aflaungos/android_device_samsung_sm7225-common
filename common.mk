@@ -102,11 +102,19 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.cameraservice.common@2.0.vendor \
-    android.frameworks.cameraservice.device@2.0.vendor \
+    android.hardware.camera.provider@2.7.vendor \
+    android.hardware.camera.common@1.0.vendor \
+    android.frameworks.cameraservice.service@2.0.vendor \
     android.frameworks.cameraservice.service@2.1.vendor \
-    android.hardware.camera.provider@2.5-service.samsung \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    android.frameworks.cameraservice.service@2.2.vendor \
+    android.hardware.camera.device-V1-ndk.vendor \
+    android.hardware.camera.metadata-V1-ndk.vendor \
+    android.hardware.camera.provider-V1-ndk.vendor \
+    libcamera2ndk_vendor \
+    libgrallocusage.vendor \
+    libmeminfo.vendor:64 \
+    vendor.qti.hardware.camera.aon@1.3.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
