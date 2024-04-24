@@ -72,6 +72,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
         <version>4.0</version>
         <interface>
             <name>ISehCameraProvider</name>
