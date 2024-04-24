@@ -461,6 +461,16 @@
             <instance>gnss_vendor</instance>
         </interface>
     </hal>
+    <hal format="hidl" override="true">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <version>2.7</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
+        </interface>
+        <fqname>@2.7::ICameraProvider/legacy/0</fqname>
+    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.gnss</name>
         <interface>
