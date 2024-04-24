@@ -35,6 +35,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
         <version>2.7</version>
         <interface>
             <name>ICameraProvider</name>
