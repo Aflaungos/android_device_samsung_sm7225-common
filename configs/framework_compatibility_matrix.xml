@@ -19,6 +19,13 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>android.samsung.hardware.camera.provider</name>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
        <name>android.hardware.biometrics.fingerprint</name>
        <version>1</version>
        <interface>
@@ -461,14 +468,6 @@
             <instance>gnss_vendor</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.camera.provider</name>
-        <version>2.6</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-    </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.gnss</name>
         <interface>
@@ -507,22 +506,6 @@
         <interface>
             <name>IService</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.camera.provider</name>
-        <version>4.0</version>
-        <interface>
-            <name>ISehCameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.camera.postproc</name>
-        <version>1.0</version>
-        <interface>
-            <name>IPostProcService</name>
-            <instance>camerapostprocservice</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
