@@ -157,6 +157,66 @@ vendor/firmware/crnv21.bin
 
 
 # Camera
+vendor/etc/init/camera.unihal.rc
+vendor/lib/com.qti.feature2.anchorsync.so
+vendor/lib/com.qti.feature2.demux.so
+vendor/lib/com.qti.feature2.frameselect.so
+vendor/lib/com.qti.feature2.fusion.so
+vendor/lib/com.qti.feature2.generic.so
+vendor/lib/com.qti.feature2.gs.so
+vendor/lib/com.qti.feature2.hdr.so
+vendor/lib/com.qti.feature2.memcpy.so
+vendor/lib/com.qti.feature2.mfsr.so
+vendor/lib/com.qti.feature2.qcfa.so
+vendor/lib/com.qti.feature2.rawhdr.so
+vendor/lib/com.qti.feature2.rt.so
+vendor/lib/com.qti.feature2.serializer.so
+vendor/lib/com.qti.feature2.stub.so
+vendor/lib/com.qti.feature2.swmf.so
+vendor/lib/libSceneDetector_v1.camera.samsung.so
+vendor/lib/libarcsoft_multi_frame_video_hdr.so
+vendor/lib/libarcsoft_object_tracking.so
+vendor/lib/libcamera2ndk_vendor.so
+vendor/lib/libcamerapostproc.so
+vendor/lib/libcamxexternalformatutils.so
+vendor/lib/libcamxifestriping.so
+vendor/lib/libmultiobject_tracker.so
+vendor/lib/libscenedetector.uniplugin@1.0.so
+vendor/lib/libsnap_vndk.so
+vendor/lib/libthirdparty_zoomtranslator_imp.so
+vendor/lib64/com.qti.feature2.anchorsync.so
+vendor/lib64/com.qti.feature2.demux.so
+vendor/lib64/com.qti.feature2.frameselect.so
+vendor/lib64/com.qti.feature2.fusion.so
+vendor/lib64/com.qti.feature2.generic.so
+vendor/lib64/com.qti.feature2.gs.so
+vendor/lib64/com.qti.feature2.hdr.so
+vendor/lib64/com.qti.feature2.memcpy.so
+vendor/lib64/com.qti.feature2.mfsr.so
+vendor/lib64/com.qti.feature2.qcfa.so
+vendor/lib64/com.qti.feature2.rawhdr.so
+vendor/lib64/com.qti.feature2.rt.so
+vendor/lib64/com.qti.feature2.serializer.so
+vendor/lib64/com.qti.feature2.stub.so
+vendor/lib64/com.qti.feature2.swmf.so
+vendor/lib64/libSceneDetector_v1.camera.samsung.so
+vendor/lib64/libarcsoft_multi_frame_video_hdr.so
+vendor/lib64/libarcsoft_object_tracking.so
+vendor/lib64/libcamera2ndk_vendor.so
+vendor/lib64/libcamerapostproc.so
+vendor/lib64/libcamxexternalformatutils.so
+vendor/lib64/libcamxifestriping.so
+vendor/lib64/libmultiobject_tracker.so
+vendor/lib64/libscenedetector.uniplugin@1.0.so
+vendor/lib64/libsnap_compute.so
+vendor/lib64/libsnap_compute_wrapper.so
+vendor/lib64/libsnap_v1.samsung.so
+vendor/lib64/libsnap_vndk.so
+vendor/lib64/libsnaplite_native.so
+vendor/lib64/libsnaplite_wrapper.so
+vendor/lib64/libthirdparty_zoomtranslator_imp.so
+vendor/lib/libvdis_interface.so
+vendor/lib64/libvdis_interface.so
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
@@ -214,7 +274,6 @@ vendor/lib/libscveCommon_stub.so
 vendor/lib/libqcwrappercommon.so
 vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libsocial_image_enhancement.uniplugin@1.0.so
-vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/libcamxfdalgo.so
 vendor/lib/camera/com.samsung.sensormodule.0_lsi_s5kjn1.bin
 vendor/lib/camera/com.samsung.sensormodule.13_sony_imx355_front_full.bin
@@ -412,6 +471,11 @@ vendor/lib/libbitmlengine.so
 vendor/lib64/libbitmlengine.so
 vendor/lib/libcamxfacialfeatures.so
 vendor/lib64/libcamxfacialfeatures.so
+
+# Camera (OOT)
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so|8ba57251a8f21990fcb94278ffac376c433f124c
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|d1d56a731570988d744ca55a6d175cc7627eaaa3
+
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/multical.bin
@@ -483,8 +547,6 @@ vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
 
 # Fingerprint
-vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
-vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
 vendor/lib/hw/fingerprint_default.so
 vendor/lib64/hw/fingerprint_default.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
@@ -498,6 +560,10 @@ vendor/lib/libbauthtzcommon.so
 vendor/lib64/libbauthtzcommon.so
 vendor/lib/libbauthserver.so
 vendor/lib64/libbauthserver.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib/libqfp_sensortest.so
+vendor/lib64/libqfp_sensortest.so
 
 # FM
 vendor/lib/vendor.qti.hardware.fm@1.0.so
@@ -784,7 +850,7 @@ vendor/lib64/libhta.so
 # NFC
 vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
 vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
-vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
+-vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
 vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
 vendor/lib64/nfc_nci_nxpsn.so
 vendor/etc/libnfc-nxp.conf
@@ -881,40 +947,22 @@ vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 vendor/etc/public.libraries.txt
 
 # QMI
-vendor/bin/irsc_util
-vendor/bin/pd-mapper
-vendor/bin/qrtr-ns
-vendor/bin/ssr_setup
 vendor/lib/libdiag.so
 vendor/lib/libdiagjni.so
 vendor/lib/libpdmapper.so
 vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmiservices.so
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_encdec.so
-vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_legacy.so
-vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libdsutils.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libpdnotifier.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
 vendor/lib/libqsocket.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libqmi_common_so.so
-vendor/lib64/libqmi_client_qmux.so
-vendor/lib64/libqmiservices.so
-vendor/lib64/libqmi.so
-vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_encdec.so
-vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_legacy.so
-vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdiagjni.so
@@ -922,11 +970,8 @@ vendor/lib64/libdsutils.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcci_legacy.so
-vendor/lib64/libqdi.so
-vendor/lib64/libqdp.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libqmiservices-sem-ext.so
-vendor/lib64/libqmiservices-ext.so
 vendor/etc/sec_config
 
 # QMI - from A525FXXU4AUJ2
