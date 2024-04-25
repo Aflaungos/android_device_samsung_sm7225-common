@@ -154,7 +154,7 @@ drm.service.enabled=true
 
 # Fingerprint
 ro.vendor.fingerprint.type=side
-ro.vendor.fingerprint.sensor_location=1080|940|250
+ro.vendor.fingerprint.sensor_location=1080|960|250
 ro.vendor.fingerprint.supports_gestures=true
 
 # Gatekeeper
