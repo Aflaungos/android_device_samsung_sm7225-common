@@ -70,12 +70,14 @@ persist.vendor.bt.aac_frm_ctl.enabled=true
 vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.enable.splita2dp=true
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 ro.vendor.bluetooth.wipower=false
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 persist.vendor.qcom.bluetooth.scram.enabled=true
-persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false
+persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 
 # Camera
 camera.disable_zsl_mode=1
@@ -154,7 +156,7 @@ drm.service.enabled=true
 
 # Fingerprint
 ro.vendor.fingerprint.type=side
-ro.vendor.fingerprint.sensor_location=1080|960|250
+ro.vendor.fingerprint.sensor_location=1080|930|450
 ro.vendor.fingerprint.supports_gestures=true
 
 # Gatekeeper
