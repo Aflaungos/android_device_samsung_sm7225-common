@@ -230,7 +230,7 @@ vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|ca1f5520f940b5e8b7a66a25af11eb0daa76ec86
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
