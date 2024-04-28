@@ -27,13 +27,6 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>android.samsung.hardware.camera.provider</name>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>internal/0</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
        <name>android.hardware.biometrics.fingerprint</name>
        <version>1</version>
        <interface>
