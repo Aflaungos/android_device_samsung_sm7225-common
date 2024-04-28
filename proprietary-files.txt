@@ -819,6 +819,15 @@ vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
 
+# HostApd
+vendor/bin/hostapd_cli
+vendor/bin/hw/hostapd
+vendor/etc/hostapd/hostapd.accept
+vendor/etc/hostapd/hostapd.deny
+vendor/etc/hostapd/hostapd_default.conf
+vendor/etc/init/hostapd.android.rc
+vendor/lib64/vendor.samsung.hardware.wifi.hostapd@3.0.so
+
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
