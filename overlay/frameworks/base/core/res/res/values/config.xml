@@ -77,6 +77,9 @@
     -->
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <!-- Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Samsung Galaxy M23</string>
+
     <!-- List supported color modes. -->
     <integer-array name="config_availableColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL -->
