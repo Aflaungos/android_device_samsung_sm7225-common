@@ -184,8 +184,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">8000</integer>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -242,24 +242,24 @@
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">10</integer>
-    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.047058824</item>
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.05</item>
 
     <!-- Default screen brightness setting set.
          -2 is invalid so setting will resort to int value specified above.
          Must be in the range specified by minimum and maximum. -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.5019608</item>
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">-2.0</item>
 
     <!-- Minimum screen brightness setting allowed by power manager.
          -2 is invalid so setting will resort to int value specified above.
          Set this to 0.0 to allow screen to go to minimal brightness.
          The user is forbidden from setting the brightness below this level. -->
-    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">-2.0</item>
 
     <!-- Maximum screen brightness allowed by the power manager.
          -2 is invalid so setting will resort to int value specified above.
          Set this to 1.0 for maximum brightness range.
          The user is forbidden from setting the brightness above this level. -->
-    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">-2.0</item>
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
          the framework from using higher refresh rates, even if display modes with higher refresh
@@ -275,7 +275,7 @@
          If a non-zero value is set for config_defaultPeakRefreshRate, then
          config_defaultRefreshRate may be set to 0, in which case the value set for
          config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">120</integer>
+    <integer name="config_defaultRefreshRate">0</integer>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
