@@ -870,6 +870,12 @@ vendor/firmware/lagoon_ipa_fws.mdt
 vendor/lib64/libkeymaster_helper.so
 -vendor/lib64/libskeymaster4device.so|e4dcee6306be79bb3ca271466afeabd1b0b966d5
 
+# Lights
+vendor/lib64/vendor.samsung.hardware.light-V1-ndk_platform.so
+vendor/lib64/hw/lights.lito.so
+vendor/etc/init/lights-default-sec.rc
+vendor/bin/hw/vendor.samsung.hardware.light-service
+
 # Machine learning
 vendor/lib64/libreffeature.so
 vendor/lib64/liblearningmodule.so
