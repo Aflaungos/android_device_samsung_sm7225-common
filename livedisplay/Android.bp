@@ -20,7 +20,6 @@ cc_binary {
     srcs: [
         "AdaptiveBacklight.cpp",
         "SunlightEnhancement.cpp",
-        "DisplayColorCalibration.cpp",
         "service.cpp",
     ],
     shared_libs: [
