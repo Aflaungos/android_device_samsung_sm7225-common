@@ -28,29 +28,14 @@ allow init rild:unix_stream_socket { connectto };
 # android.hardwar
 allow init hwservicemanager:binder { call };
 
-# /vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
-allow init vendor_file:file { execute execute_no_trans };
-
-allow init hal_lineage_fastcharge_hwservice:hwservice_manager { add find };
-
 allow init hwservicemanager:binder { call transfer };
 
-allow init hal_lineage_touch_hwservice:hwservice_manager { add };
-
 allow init same_process_hal_file:file { execute };
-
-allow init sysfs:file { open read write };
-
-allow init hal_fingerprint_hwservice:hwservice_manager { find };
-
-allow init hal_lineage_livedisplay_hwservice:hwservice_manager { find add };
 
 allow init self:capability { sys_module };
 
 allow init vendor_persist_sensors_file:file { append };
 
 allow init servicemanager:binder { call };
-
-allow init hal_sensors_service:service_manager { add };
 
 allow init init:netlink_socket { create bind write read };
