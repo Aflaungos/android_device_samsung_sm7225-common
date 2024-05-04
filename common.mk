@@ -458,7 +458,7 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
-    android.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.hostapd-V1-ndk.vendor \
     hostapd \
     libwifi-hal \
     libwifi-hal-qcom \
@@ -468,6 +468,9 @@ PRODUCT_PACKAGES += \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf \
+    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
+    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     android.hardware.tetheroffload.config@1.0
 
 # Fix ADB
