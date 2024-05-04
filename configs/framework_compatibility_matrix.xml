@@ -265,14 +265,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.wifi.hostapd</name>
-        <version>1</version>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
@@ -934,14 +926,6 @@
             <name>IHostapdVendor</name>
             <instance>default</instance>
             <instance>wigighostapd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.wifi.hostapd</name>
-        <version>1.0-3</version>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
