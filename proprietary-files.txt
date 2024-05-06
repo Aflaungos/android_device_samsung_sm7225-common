@@ -100,6 +100,43 @@ vendor/lib/libmulawdec.so
 vendor/lib64/libmulawdec.so
 
 # Audio (modules)
+vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libaudiopreprocessing.so
+vendor/lib64/soundfx/libaudiopreprocessing.so
+vendor/lib/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib/soundfx/libbundlewrapper.so
+vendor/lib64/soundfx/libbundlewrapper.so
+vendor/lib/soundfx/libdownmix.so
+vendor/lib64/soundfx/libdownmix.so
+vendor/lib/soundfx/libdynproc.so
+vendor/lib64/soundfx/libdynproc.so
+vendor/lib/soundfx/libeffectproxy.so
+vendor/lib64/soundfx/libeffectproxy.so
+vendor/lib/soundfx/libldnhncr.so
+vendor/lib64/soundfx/libldnhncr.so
+vendor/lib/soundfx/libmysound.so
+vendor/lib64/soundfx/libmysound.so
+vendor/lib/soundfx/libmyspace.so
+vendor/lib64/soundfx/libmyspace.so
+vendor/lib/soundfx/libplaybackrecorder.so
+vendor/lib64/soundfx/libplaybackrecorder.so
+vendor/lib/soundfx/libqcompostprocbundle.so
+vendor/lib64/soundfx/libqcompostprocbundle.so
+vendor/lib/soundfx/libqcomvisualizer.so
+vendor/lib64/soundfx/libqcomvisualizer.so
+vendor/lib/soundfx/libqcomvoiceprocessing.so
+vendor/lib64/soundfx/libqcomvoiceprocessing.so
+vendor/lib/soundfx/libreverbwrapper.so
+vendor/lib64/soundfx/libreverbwrapper.so
+vendor/lib/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib/soundfx/libswspatializer.so
+vendor/lib64/soundfx/libswspatializer.so
+vendor/lib/soundfx/libvisualizer.so
+vendor/lib64/soundfx/libvisualizer.so
+vendor/lib/soundfx/libvolumelistener.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcreverb.so
@@ -114,6 +151,11 @@ vendor/lib64/soundfx/libqcbassboost.so
 # Audio (Firmware)
 vendor/firmware/dax_param.bin
 vendor/firmware/tfa98xx.cnt
+
+# Audio (Dolby)
+vendor/etc/dolby/dax-default.xml
+vendor/lib/soundfx/libswdap.so
+vendor/lib64/soundfx/libswdap.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -568,6 +610,7 @@ vendor/lib/libtrustedapploader.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # Feature
 vendor/lib/libsemnativecarrierfeature.so
@@ -819,6 +862,9 @@ vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
 
+# Graphics (HDR)
+vendor/etc/hdr_samsung_mx.key
+
 # Health
 vendor/lib64/vendor.samsung.hardware.health@2.0.so
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|c2fe30e1db417bf33262f4a126f4ee496499958a
@@ -886,6 +932,10 @@ vendor/etc/media_lagoon/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 
+# Media (CAS)
+vendor/lib/mediacas/libclearkeycasplugin.so
+vendor/lib64/mediacas/libclearkeycasplugin.so
+
 # Neuralnetworks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/bin/npu_launcher
@@ -939,6 +989,8 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
+vendor/lib/vndk/libstagefright_omx_utils.so
+vendor/lib/vndk/libstagefright_xmlparser.so
 vendor/lib64/libOmxApeDec.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -1097,6 +1149,7 @@ vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/libipanat.so
+vendor/etc/qms_log_config
 
 # RIL - from A525FXXU4AUJ2
 vendor/bin/hw/rild|72c84e72636177fd669be36a6eb8eda63fe270b0
