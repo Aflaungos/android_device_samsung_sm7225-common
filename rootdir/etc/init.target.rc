@@ -224,7 +224,3 @@ on property:vendor.dcvs.prop=1
 
 on property:persist.vendor.radio.port_index=""
     setprop sys.usb.config adb
-
-# light sensor
-on property:vendor.post_boot.parsed=1 && property:ro.product.device=m23xq
-    write /sys/class/sensors/light_sensor/lcd_onoff 0
