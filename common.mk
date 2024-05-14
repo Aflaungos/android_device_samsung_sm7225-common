@@ -94,6 +94,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SamsungDAP
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
