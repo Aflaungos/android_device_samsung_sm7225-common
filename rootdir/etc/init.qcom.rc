@@ -82,6 +82,7 @@ on init
 
     # Send Touchscreen fix commands
     write /sys/class/sec/tsp/cmd aot_enable,1
+    write /sys/class/sec/tsp/cmd ear_detect_enable,1
     write /sys/class/sec/tsp/cmd check_connection
     write /sys/class/sec/tsp/enabled 1,0
     write /sys/class/sec/tsp/enabled 2,1
