@@ -234,8 +234,8 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # LiveDisplay
-# PRODUCT_PACKAGES += \
-#    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7225
+ PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7225
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -464,7 +464,6 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
-    android.hardware.wifi.hostapd-V1-ndk.vendor \
     hostapd \
     libwifi-hal \
     libwifi-hal-qcom \
@@ -473,11 +472,7 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
-    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
-    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
-    android.hardware.tetheroffload.config@1.0
+    wpa_supplicant.conf	
 
 # Fix ADB
 PRODUCT_SYSTEM_PROPERTIES += \

@@ -283,15 +283,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.bluetooth.a2dp</name>
         <version>1.0</version>
@@ -917,15 +908,6 @@
         <interface>
             <name>IHidlVppService</name>
             <instance>vppService</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.wifi.hostapd</name>
-        <version>1.0-3</version>
-        <interface>
-            <name>IHostapdVendor</name>
-            <instance>default</instance>
-            <instance>wigighostapd</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
