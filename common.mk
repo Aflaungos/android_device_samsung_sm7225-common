@@ -480,7 +480,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libipanat \
     ipacm \
-    IPACM_cfg.xml
+    IPACM_cfg.xml \
+    android.hardware.tetheroffload.config@1.0.vendor  \
+    android.hardware.tetheroffload.control@1.0.vendor
 
 # Thermal
 PRODUCT_PACKAGES += \
