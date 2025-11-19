@@ -340,7 +340,8 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    ibsqlite.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -374,7 +375,8 @@ PRODUCT_BOOT_JARS += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@2.0.vendor \
+    libcamera_metadata.vendor
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
