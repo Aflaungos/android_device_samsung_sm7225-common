@@ -221,6 +221,7 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl \
     FMRadio
 
 # Gatekeeper
