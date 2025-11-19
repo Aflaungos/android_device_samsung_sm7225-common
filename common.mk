@@ -478,6 +478,7 @@ PRODUCT_BOOT_JARS += \
 
 # Tether
 PRODUCT_PACKAGES += \
+    libipanat \
     ipacm \
     IPACM_cfg.xml
 
