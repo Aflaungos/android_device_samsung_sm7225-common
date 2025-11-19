@@ -318,9 +318,10 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor
 
-# Net
+# Network
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    libnl
 
 # Neuralnetworks
 PRODUCT_PACKAGES += \
