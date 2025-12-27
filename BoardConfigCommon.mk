@@ -101,7 +101,7 @@ BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 
 # Kernel Clang Flags
 KERNEL_CC := CC=clang
-override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-gnu-
 
 # Enable LZ4 compression for ramdisks
 BOARD_RAMDISK_USE_LZ4 := true
