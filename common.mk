@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     fstab.default.ramdisk \
     fstab.ramplus \
     init.qcom.rc \
+    init.qcom.recovery.rc \
     init.qcom.factory.rc \
     init.qcom.usb.rc \
     init.qti.qcv.rc \
@@ -432,10 +433,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \
