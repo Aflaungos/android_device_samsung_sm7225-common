@@ -106,6 +106,15 @@
         "DefaultIndex": 0
     },
     {
+        "Name": "BatteryLcdStatus",
+        "Path": "/sys/class/power_supply/battery/lcd",
+        "Values": [
+            "1",
+            "0"
+        ],
+        "ResetOnInit": true
+    },
+    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/hyst_trigger_count",
       "Values": [
@@ -356,6 +365,12 @@
     {
       "PowerHint": "INTERACTIVE",
       "Node": "LightSensorEnable",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "BatteryLcdStatus",
       "Duration": 0,
       "Value": "1"
     },
