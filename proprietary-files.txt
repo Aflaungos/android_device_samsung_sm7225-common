@@ -600,11 +600,6 @@ vendor/lib64/libkeymaster_helper.so|78d06cca7d6d3aa94d5d243f09278acb288339a8
 # Lights
 vendor/lib64/vendor.samsung.hardware.light-V1-ndk_platform.so
 
-# Machine learning
-vendor/lib64/libreffeature.so
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters.so
-
 # Media (From FP4)
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|c170ebc5a0416f609186639125132b87a5650ef8
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
