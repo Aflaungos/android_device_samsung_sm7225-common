@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
     init.qti.media.sh \
     init.qti.qcv.sh
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
+
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_sm7225)
 
 # Ant
