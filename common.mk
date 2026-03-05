@@ -507,6 +507,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
+# Vibrator
+$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
