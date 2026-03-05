@@ -46,6 +46,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     ('vendor/lib64/nfc_nci_nxpsn.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    ('vendor/lib64/libdpps.so'): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
