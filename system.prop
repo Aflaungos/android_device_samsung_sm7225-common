@@ -1,3 +1,6 @@
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # Netflix
 ro.netflix.bsp_rev=Q4350-32962-1
 
