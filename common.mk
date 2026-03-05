@@ -89,7 +89,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl.samsung-sm7225 \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl \
     sound_trigger.primary.lito \
     audio.bluetooth.default \
