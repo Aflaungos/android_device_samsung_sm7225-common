@@ -37,6 +37,9 @@ type gatekeeper_efs_file, file_type;
 type sysfs_sec_fastcharge, fs_type, sysfs_type;
 type sysfs_sec_fastcharge_writable, fs_type, sysfs_type;
 
+# Memory
+type sysfs_oem_memory, fs_type, sysfs_type;
+
 # Misc
 type misc_file, fs_type;
 allow misc_file labeledfs:filesystem associate;
