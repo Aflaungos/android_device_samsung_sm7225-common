@@ -165,12 +165,6 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
-# Camera
-SOONG_CONFIG_NAMESPACES += samsungCameraVars
-SOONG_CONFIG_samsungCameraVars += needs_sec_reserved_field
-
-SOONG_CONFIG_samsungCameraVars_needs_sec_reserved_field := true
-
 # Lineage Health
 $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
 $(call soong_config_set,lineage_health,fast_charge_value_none,1)
