@@ -205,7 +205,8 @@ ro.vendor.nfc.support.ese=false
 ro.vendor.nfc.info.antpos=16
 
 # Media
-debug.stagefright.c2inputsurface=-1
+debug.stagefright.omx_default_rank=0
+debug.stagefright.ccodec=4
 
 # OEM Unlock
 ro.oem_unlock_supported=1
