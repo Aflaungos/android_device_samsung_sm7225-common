@@ -177,12 +177,6 @@ $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
-WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld
-$(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating wifi firmware symlinks: $@"
-	@mkdir -p $@/wlan
-	$(hide) ln -sf /vendor/etc/wifi/WCNSS_qcom_cfg.ini $@/wlan/WCNSS_qcom_cfg.ini
-
 EGL_LIBS := libq3dtools_adreno.so libGLESv2_adreno.so libEGL_adreno.so
 
 EGL_32_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/lib/,$(notdir $(EGL_LIBS)))
@@ -210,7 +204,6 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MDM_SLPI_SYMLINKS) \
     $(RFS_MDM_TN_SYMLINKS) \
     $(RFS_APQ_GNSS_SYMLINKS) \
-    $(WIFI_FIRMWARE_SYMLINKS) \
     $(CNE_APP_SYMLINKS) \
     $(EGL_32_SYMLINKS) \
     $(EGL_64_SYMLINKS)
