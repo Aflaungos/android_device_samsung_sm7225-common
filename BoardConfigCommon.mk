@@ -222,9 +222,6 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.default
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
-# Samsung
-BOARD_VENDOR := samsung
-
 # SE Policy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
