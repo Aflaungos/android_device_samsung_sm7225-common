@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.recovery.rc \
     init.qcom.usb.rc \
+    init.samsung.battery.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
