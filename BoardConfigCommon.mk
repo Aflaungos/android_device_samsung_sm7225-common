@@ -57,6 +57,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := := cortex-a55
 # Kernel config
 TARGET_KERNEL_SOURCE        := kernel/samsung/m23xq
 TARGET_KERNEL_CONFIG        := vendor/lineage-m23xq_defconfig
+TARGET_KERNEL_NO_GCC	    := true
 TARGET_KERNEL_ARCH          := arm64
 TARGET_KERNEL_HEADER_ARCH   := arm64
 TARGET_LINUX_KERNEL_VERSION := 4.19
